@@ -19,7 +19,7 @@ public class LevelProgress : MonoBehaviour
     public static LevelProgress Instance;
 
     // Called by spawner to let LevelProgress its done spawning.
-    void SetFinishedSpawn()
+    public void SetFinishedSpawn()
     {
         finishedSpawn = true;
     }

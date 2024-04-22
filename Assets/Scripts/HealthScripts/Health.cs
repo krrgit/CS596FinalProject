@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int health;
-    public int startHealth = 100;
-    public int DPS = 10; // Change it whenever for enemy/slime attack
+    public float health;
+    public float startHealth = 100;
+    public float DPS = 10; // Change it whenever for enemy/slime attack
     public bool godMode = false; // toggle
 
     void Start()
@@ -12,7 +13,7 @@ public class Health : MonoBehaviour
         health = startHealth;
     }
 
-    public void TakeDamage(int DPS)
+    public void TakeDamage(float DPS)
     {
         if (!godMode) // Check if god mode is not enabled
         {
@@ -28,7 +29,7 @@ public class Health : MonoBehaviour
     // Death
     private void Death()
     {
-        Destroy(gameObject);
+       Destroy(gameObject);
     }
 
     // Toggle for GodMode
@@ -36,4 +37,5 @@ public class Health : MonoBehaviour
     {
         godMode = enabled;
     }
+    
 }
