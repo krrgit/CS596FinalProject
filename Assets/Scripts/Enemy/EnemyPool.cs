@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -13,13 +14,22 @@ public class EnemyPool : MonoBehaviour
     
     public float spawnTimerBetweenWaves = 3.0f;
     public float spawnTimerBetweenEnemies = 1.0f;
-    [SerializeField] bool isSpawning = true;
+    [SerializeField] bool isSpawning = false;
 
     private LevelProgress levelProgress;
     private void Start()
     {
         levelProgress = FindObjectOfType<LevelProgress>();
         StartCoroutine(SpawnEnemiesSlowly());
+    }
+
+    private void Update()
+    {
+        if (isSpawning)
+        {
+            StartCoroutine(SpawnEnemiesSlowly());
+            isSpawning = false;
+        }
     }
 
     GameObject InstantiateEnemy(Vector3 spawnPosition)

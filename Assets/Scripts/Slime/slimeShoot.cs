@@ -40,6 +40,28 @@ public class slimeShoot : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        newBullet.transform.SetParent(transform);
+
+        StartCoroutine(DestroyBulletWhenOutOfView(newBullet));
+    }
+    
+    //destroys instantiated bullets if out of view
+    IEnumerator DestroyBulletWhenOutOfView(GameObject bullet)
+    {
+        Camera mainCamera = Camera.main;
+
+        while (bullet != null)
+        {
+            Vector3 viewportPos = mainCamera.WorldToViewportPoint(bullet.transform.position);
+
+            if (viewportPos.x < 0f || viewportPos.x > 1f || viewportPos.y < 0f || viewportPos.y > 1f)
+            {
+                Destroy(bullet);
+                yield break;
+            }
+
+            yield return null;
+        }
     }
 }
