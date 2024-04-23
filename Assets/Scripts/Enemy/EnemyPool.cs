@@ -13,7 +13,7 @@ public class EnemyPool : MonoBehaviour
     
     public float spawnTimerBetweenWaves = 3.0f;
     public float spawnTimerBetweenEnemies = 1.0f;
-
+    [SerializeField] bool isSpawning = true;
 
     private LevelProgress levelProgress;
     private void Start()
@@ -28,16 +28,19 @@ public class EnemyPool : MonoBehaviour
         newEnemy.transform.SetParent(transform);
         return newEnemy;
     }
-    
+
     private IEnumerator SpawnEnemiesSlowly()
     {
         for (int j = 0; j < waveOfEnemies; j++)
         {
             for (int i = 0; i < enemiesPerWave; i++)
             {
-                Vector3 spawnPosition = gridManager.GetCellPosition();
-                InstantiateEnemy(spawnPosition);
-                yield return new WaitForSeconds(spawnTimerBetweenEnemies);
+                if (isSpawning)
+                {
+                    Vector3 spawnPosition = gridManager.GetCellPosition();
+                    InstantiateEnemy(spawnPosition);
+                    yield return new WaitForSeconds(spawnTimerBetweenEnemies);
+                }
             }
             yield return new WaitForSeconds(spawnTimerBetweenWaves);
         }

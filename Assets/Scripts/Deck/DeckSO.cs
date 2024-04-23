@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Timeline;
 
+
+
 public enum Cards
 {
     BasicSlime,
@@ -26,18 +28,19 @@ public class DeckSO : ScriptableObject
     public int maxAttack = 9;
     public CardClass[] cards;
 }
-
+    
 
 [System.Serializable]
 public class CardClass
 {
     public Cards card;
     public int attack = 3;
-
-    public CardClass(Cards _card, int _attack)
+    public GameObject prefab;
+    public CardClass(Cards _card, int _attack, GameObject _prefab)
     {
         card = _card;
         attack = _attack;
+        prefab = _prefab;
     }
 
     public override string ToString()
