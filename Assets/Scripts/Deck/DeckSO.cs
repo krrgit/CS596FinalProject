@@ -35,12 +35,10 @@ public class CardClass
 {
     public Cards card;
     public int attack = 3;
-    public GameObject prefab;
-    public CardClass(Cards _card, int _attack, GameObject _prefab)
+    public CardClass(Cards _card, int _attack)
     {
         card = _card;
         attack = _attack;
-        prefab = _prefab;
     }
 
     public override string ToString()
