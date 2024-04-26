@@ -3,7 +3,7 @@ using UnityEngine;
 public class GemSpawner : MonoBehaviour
 {
     public GameObject gemPrefab;
-    
+
     public float dropInterval = 10f;
     private float nextDropTime;
 
@@ -27,7 +27,7 @@ public class GemSpawner : MonoBehaviour
     {
         // random x position within range of screen width
         float randomX = Random.Range(0f, Screen.width);
-        
+
         // screen position to world position
         Vector3 screenPosition = new Vector3(randomX, Screen.height, 10f);
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);

@@ -7,7 +7,7 @@ using UnityEngine.Timeline;
 
 public enum Cards
 {
-    BasicSlime,
+    BasicSlime = 0,
     Chest,
     BunnySlime,
     ArmorSlime,

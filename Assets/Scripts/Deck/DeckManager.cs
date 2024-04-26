@@ -182,6 +182,7 @@ public class DeckManager : MonoBehaviour
     void Start()
     {
         sceneDeck = new List<CardClass>(deckSO.cards);
+        InitializeSceneDeck();
         ShuffleDeck();
         DrawToFillHand();
     }

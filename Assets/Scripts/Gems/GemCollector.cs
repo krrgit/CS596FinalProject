@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GemCollector : MonoBehaviour
 {
-    private int gem_count = 0;
+    [SerializeField]private int gem_count = 0;
 
     void Update()
     {
