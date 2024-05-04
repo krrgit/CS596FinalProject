@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: SaplingSlime
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  cardName: SaplingSlime
+  cardName: Sapling Slime
   cost: 1
   maxHealth: 10
   level: 1

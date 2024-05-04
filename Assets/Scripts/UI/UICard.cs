@@ -9,22 +9,24 @@ public class UICard : MonoBehaviour, IComparable
 {
     const int IGNORE_RAYCAST_LAYER =  2;
 
-    [SerializeField] CardSO cardClass;
+    [SerializeField] CardSO cardSO;
     [SerializeField] private bool cardHeld;
     [SerializeField] private float moveLerp = 3.0f;
     [SerializeField] private float rotateLerp = 10.0f;
     [SerializeField] private Vector3 targetPos;
     [SerializeField] private Vector3 handPos;
+    [SerializeField] private Vector3 displayPos = new Vector3(0.0f, 0.25f, 0.0f);
 
     [Header("UI Elements")] 
     [SerializeField] private TMP_Text tmpName;
     [SerializeField] private TMP_Text tmpCost;
+    [SerializeField] private TMP_Text tmpDesc;
     
     private int cardLayer;
 
-    public CardSO CardClass
+    public CardSO CardSO
     {
-        get { return cardClass; }
+        get { return cardSO; }
     }
 
     public bool IsHeld
@@ -32,9 +34,9 @@ public class UICard : MonoBehaviour, IComparable
         get { return cardHeld; }
     }
 
-    public void SetCardClass(CardSO _cardClass)
+    public void SetCardClass(CardSO _cardSO)
     {
-        cardClass = _cardClass;
+        cardSO = _cardSO;
         UpdateUI();
     }
     
@@ -58,8 +60,17 @@ public class UICard : MonoBehaviour, IComparable
 
     void UpdateUI()
     {
-        tmpName.text = InsertSpaceBetweenWords(cardClass.name.ToString());
-        tmpCost.text = cardClass.cost.ToString();
+        GameObject prefab = UnitSpawner.Instance.GetCardDisplay(cardSO.name);
+        if (prefab)
+        {
+            var go = Instantiate(prefab, transform.position, transform.rotation);
+            go.transform.parent = transform;
+            go.transform.localPosition = displayPos;
+        }
+        
+        tmpName.text = cardSO.cardName;
+        tmpCost.text = cardSO.cost.ToString();
+        tmpDesc.text = cardSO.description;
     }
 
     public void SetTargetPos(Vector3 newPosition)
@@ -122,22 +133,5 @@ public class UICard : MonoBehaviour, IComparable
             return 1;
  
         return 0;
-    }
-    
-    string InsertSpaceBetweenWords(string input)
-    {
-        System.Text.StringBuilder sb = new System.Text.StringBuilder();
-        
-        foreach (char c in input) {
-            // Check if the character is uppercase
-            if (char.IsUpper(c)) {
-                // Insert a space before the uppercase letter
-                sb.Append(' ');
-            }
-            // Append the character to the result
-            sb.Append(c);
-        }
-        
-        return sb.ToString().Trim();
     }
 }

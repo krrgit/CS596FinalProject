@@ -301,6 +301,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c57cfcdf8111114b882edc3a5aabe1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardDisplays:
+  - {fileID: 7928167938489035327, guid: e0fb2a4ecac2d47d3ba950565b229b41, type: 3}
+  - {fileID: 3668116956201739857, guid: 15e2b1578998a4ccbb3753717043f3f9, type: 3}
+  - {fileID: 1546071679448461157, guid: 56d6500cafb1c4e5a9722ef92d063f65, type: 3}
+  - {fileID: 5357703510895744962, guid: 13f2199289c72440e958043621447721, type: 3}
+  - {fileID: 6017567893226575047, guid: 7c9f30070db0e4d4ea1fc7f70eb40396, type: 3}
+  - {fileID: 3425632168493511056, guid: bccf5cbe472b94b00a332846b6912a65, type: 3}
+  - {fileID: 8716612672008579672, guid: 15dd27ad322b2452bbccfa8cc8ffe083, type: 3}
+  - {fileID: 1663543663021064217, guid: 55500d7bf856049acace11e8fbfc9e1f, type: 3}
+  - {fileID: 2423717591788751440, guid: 521c346ce9853412594287110b37187b, type: 3}
 --- !u!4 &169709976
 Transform:
   m_ObjectHideFlags: 0
@@ -1095,7 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3091ef8b6fd04d64682098a625f1e663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gem_count: 5
+  gem_count: 6
 --- !u!1 &875803208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,7 +1474,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567833506}
-  m_LocalRotation: {x: 0.013088495, y: 0.9996574, z: -0.000000119209275, w: -0.022669848}
+  m_LocalRotation: {x: -0.00029677144, y: 0.0000038823628, z: 0.013080875, w: 0.9999144}
   m_LocalPosition: {x: 0.053, y: -0.454, z: -1.25}
   m_LocalScale: {x: 1.429844, y: 1.1112804, z: 3.0233364}
   m_ConstrainProportionsScale: 0
@@ -1472,7 +1482,7 @@ Transform:
   - {fileID: 2125949342}
   m_Father: {fileID: 1761459945}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -30, y: 183, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.034, y: 0, z: 1.499}
 --- !u!1 &1641417874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,14 +1506,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641417874}
-  m_LocalRotation: {x: 0, y: -0.026176924, z: 0, w: 0.99965733}
+  m_LocalRotation: {x: 0, y: 0.99965733, z: 0, w: 0.026177015}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 610239317}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -3, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 177, z: 0}
 --- !u!1 &1707817800
 GameObject:
   m_ObjectHideFlags: 0

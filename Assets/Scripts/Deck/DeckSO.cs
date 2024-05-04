@@ -35,6 +35,7 @@ public class CardSO : ScriptableObject
     public int cost = 1;
     public int maxHealth = 10;
     public int level = 1;
+    public string description = "This is a sample description of a card.";
     public GameObject prefab;
 }
 

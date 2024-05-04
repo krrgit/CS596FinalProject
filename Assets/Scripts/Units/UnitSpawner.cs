@@ -7,6 +7,7 @@ using UnityEngine;
 // Spawns unit on field, given a class & grid cell.
 public class UnitSpawner : MonoBehaviour
 {
+    public GameObject[] cardDisplays;
     public static UnitSpawner Instance;
     
     void Awake()
@@ -23,5 +24,18 @@ public class UnitSpawner : MonoBehaviour
         go.transform.parent = transform;
         card.cardSO = cardSO;
         card.gridCell = gridCell;
+    }
+    
+    public GameObject GetCardDisplay(string cardName)
+    {
+        for (int i = 0; i < cardDisplays.Length; i++)
+        {
+            if (cardDisplays[i].name.Contains(cardName))
+            {
+                return cardDisplays[i];
+            }
+        }
+
+        return null;
     }
 }

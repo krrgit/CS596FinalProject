@@ -32,8 +32,9 @@ public class Health : MonoBehaviour
 
     // Death
     private void Death()
-    { OnDeathEvent?.Invoke();
-       Destroy(gameObject);
+    { 
+        OnDeathEvent?.Invoke(); 
+        Destroy(gameObject);
     }
 
     // Toggle for GodMode

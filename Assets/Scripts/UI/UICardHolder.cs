@@ -102,10 +102,10 @@ public class UICardHolder : MonoBehaviour
             // hit cell & is open
             if (cell && cell.isOpen)
             {
-                if (uiCard.CardClass.cost <= gemCollector.GetGemCount())
+                if (uiCard.CardSO.cost <= gemCollector.GetGemCount())
                 {
                     print("Spawn Card");
-                    UnitSpawner.Instance.SpawnUnit(uiCard.CardClass, cell);
+                    UnitSpawner.Instance.SpawnUnit(uiCard.CardSO, cell);
                     cardHeld = false;
                     uiCard.PlayCard();
                     uiCard = null;
