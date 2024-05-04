@@ -9,21 +9,19 @@ public class gridCell : MonoBehaviour
     [SerializeField] private Color baseColor;
     [SerializeField] private Color offsetColor;
     [SerializeField] private Renderer renderer;
+    public bool isOpen = true;
     private Color origColor;
-
-    [SerializeField] private MouseInputManager inputManager;
 
     public bool isHighlighted;
 
     private void Start()
     {
         origColor = renderer.material.color;
-        inputManager = FindObjectOfType<MouseInputManager>();
     }
 
     private void OnMouseDown()
     {
-        inputManager.CellClick(this);
+        //inputManager.CellClick(this);
         print("clicked cell at: " + transform.position);
     }
 

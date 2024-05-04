@@ -29,14 +29,6 @@ public class DeckManagerEditor : Editor
         {
             deckManager.DrawCard();
         }
-        if (GUILayout.Button("Play Selected Card in Hand"))
-        {
-            deckManager.PlayCard();
-        }
-        if (GUILayout.Button("Destroy Selected Card on Field"))
-        {
-            deckManager.ReturnSelectedFieldCardToDeck();
-        }
         
         GUILayout.Space(10);
         

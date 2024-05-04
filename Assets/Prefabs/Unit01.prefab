@@ -45,8 +45,9 @@ GameObject:
   - component: {fileID: 9076575489451304943}
   - component: {fileID: 9076575489451304936}
   - component: {fileID: 3451251339547265127}
+  - component: {fileID: 4996999626702254275}
   m_Layer: 0
-  m_Name: player 2
+  m_Name: Unit01
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 097e882d9181540d7aa7a749240d620e, type: 2}
+  - {fileID: 2100000, guid: c7a80f804042ec646b835d95cd939c2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,3 +166,20 @@ MonoBehaviour:
   shotsPerBurst: 3
   timeBetweenShots: 1
   burstDelay: 4
+--- !u!114 &4996999626702254275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076575489451304929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796c6e7387003429e8bd04e1b3eb86a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardClass:
+    card: 0
+    attack: 0
+  gridCell: {fileID: 0}
+  health: {fileID: 9076575489451304936}
