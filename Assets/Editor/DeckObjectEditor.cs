@@ -14,7 +14,7 @@ public class DeckObjectEditor : Editor
 
         if (GUILayout.Button("Randomize Deck"))
         {
-            thisDeck.cards = new CardClass[thisDeck.deckSize];
+            thisDeck.cards = new CardSO[thisDeck.deckSize];
             for (int i = 0; i < thisDeck.deckSize; i++)
             {
                 thisDeck.cards[i] = RandomCard(thisDeck);
@@ -22,11 +22,8 @@ public class DeckObjectEditor : Editor
         }
     }
 
-    CardClass RandomCard(DeckSO deck)
+    CardSO RandomCard(DeckSO deck)
     {
-        return new CardClass(
-            (Cards)Random.Range(0, (int)Cards.CardCount),
-            Random.Range(deck.minAttack, deck.maxAttack + 1)
-        );
+        return deck.cardpack[Random.Range(0, deck.cardpack.Length)];
     }
 }

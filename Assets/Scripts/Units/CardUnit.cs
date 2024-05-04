@@ -6,11 +6,10 @@ using UnityEngine;
 // This is the actual card on the field.
 public class CardUnit : MonoBehaviour
 {
-    public CardClass cardClass;
+    public CardSO cardSO;
     public gridCell gridCell;
     [SerializeField] private Health health;
     
-
     private void OnEnable()
     {
         health.OnDeathEvent += SendBackToDeck;
@@ -24,6 +23,6 @@ public class CardUnit : MonoBehaviour
     public void SendBackToDeck()
     {
         gridCell.isOpen = true;
-        DeckManager.Instance.ReturnFieldCardToDeck(cardClass);
+        DeckManager.Instance.ReturnFieldCardToDeck(cardSO);
     }
 }

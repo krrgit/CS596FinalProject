@@ -7,9 +7,6 @@ using UnityEngine;
 // Spawns unit on field, given a class & grid cell.
 public class UnitSpawner : MonoBehaviour
 {
-    
-    public GameObject[] prefabs;
-
     public static UnitSpawner Instance;
     
     void Awake()
@@ -18,12 +15,13 @@ public class UnitSpawner : MonoBehaviour
         else Destroy(this);
     }
     
-    public void SpawnUnit(CardClass cardClass, gridCell gridCell)
+    public void SpawnUnit(CardSO cardSO, gridCell gridCell)
     {
         gridCell.isOpen = false;
-        var go = Instantiate(prefabs[(int)cardClass.card], gridCell.GetCellPosition(), Quaternion.identity);
+        var go = Instantiate(cardSO.prefab, gridCell.GetCellPosition(), Quaternion.identity);
         var card = go.GetComponent<CardUnit>();
-        card.cardClass = cardClass;
+        go.transform.parent = transform;
+        card.cardSO = cardSO;
         card.gridCell = gridCell;
     }
 }

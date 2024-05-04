@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 9076575489451304940}
   - component: {fileID: 9076575489451304943}
   - component: {fileID: 9076575489451304936}
-  - component: {fileID: 3451251339547265127}
+  - component: {fileID: -3189646061442736071}
   m_Layer: 0
   m_Name: chest
   m_TagString: Player
@@ -148,7 +148,7 @@ MonoBehaviour:
   startHealth: 100
   DPS: 10
   godMode: 0
---- !u!114 &3451251339547265127
+--- !u!114 &-3189646061442736071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,11 +157,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9076575489451304929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 335280c5d7ccfc44f81cdcab1262eb3e, type: 3}
+  m_Script: {fileID: 11500000, guid: 796c6e7387003429e8bd04e1b3eb86a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 704340310107545808, guid: 20a3f802dadd56b45a39d13b2e64ff54, type: 3}
-  firePoint: {fileID: 4986698046153075993}
-  shotsPerBurst: 3
-  timeBetweenShots: 1
-  burstDelay: 4
+  cardSO: {fileID: 0}
+  gridCell: {fileID: 0}
+  health: {fileID: 9076575489451304936}

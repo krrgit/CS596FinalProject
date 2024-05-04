@@ -24,26 +24,36 @@ public enum Cards
 public class DeckSO : ScriptableObject
 {
     public int deckSize = 10;
-    public int minAttack = 1;
-    public int maxAttack = 9;
-    public CardClass[] cards;
+    public CardSO[] cardpack;
+    public CardSO[] cards;
 }
-    
 
-[System.Serializable]
-public class CardClass
+[CreateAssetMenu(fileName = "CardSO", menuName = "Deck/CardSO", order = 2)]
+public class CardSO : ScriptableObject
 {
-    public Cards card;
-    public int attack = 3;
-    public CardClass(Cards _card, int _attack)
-    {
-        card = _card;
-        attack = _attack;
-    }
-
-    public override string ToString()
-    {
-        return card.ToString() + "(" + attack + ")";
-    }
-    
+    public string cardName;
+    public int cost = 1;
+    public int maxHealth = 10;
+    public int level = 1;
+    public GameObject prefab;
 }
+
+//
+// [System.Serializable]
+// public class CardClass
+// {
+//     public Cards card;
+//     public int cost = 3;
+//     public int health = 100;
+//     public CardClass(Cards _card, int _cost)
+//     {
+//         card = _card;
+//         cost = _cost;
+//     }
+//
+//     public override string ToString()
+//     {
+//         return card.ToString() + "(" + cost + ")";
+//     }
+//     
+// }

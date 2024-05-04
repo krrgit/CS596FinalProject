@@ -9,10 +9,12 @@ public class DeckManager : MonoBehaviour
     [Header("UI")] 
     [SerializeField] private UIDeckManager uiDeck;
     [Header("Parameters")]
-    public int handSize = 5;                                      // Max number of cards in hand. 
+    public int handSize = 5;                                                        // Max number of cards in hand. 
     [SerializeField] private bool enableStaleness = true;                           // Everytime this card returns to the deck, -1 to attack 
+    [SerializeField] private float waitBeforeFirstDraw = 0.5f;
+    [SerializeField] private float timeBetweenDraws = 0.1f;
     [Header("Lists")]
-    [SerializeField] private List<CardClass> sceneDeck = new List<CardClass>();   // Scene instance of the deck. This is to avoid changing the actual deck.
+    [SerializeField] private List<CardSO> sceneDeck = new List<CardSO>();     // Scene instance of the deck. This is to avoid changing the actual deck.
 
     public static DeckManager Instance; 
     
@@ -24,7 +26,7 @@ public class DeckManager : MonoBehaviour
     
 
     // Returns the field card back to the deck.
-    public void ReturnFieldCardToDeck(CardClass card)
+    public void ReturnFieldCardToDeck(CardSO card)
     {
         sceneDeck.Add(card);
         print("Returned " + card.ToString() + " to deck.");
@@ -32,19 +34,19 @@ public class DeckManager : MonoBehaviour
     
     public void ShuffleDeck()
     {
-        List<CardClass> cardsList = new List<CardClass>();
+        List<CardSO> cardsList = new List<CardSO>();
 
         // Randomly insert into list
         int insertIndex = 0;
         while (sceneDeck.Count > 0)
         {
-            CardClass card = sceneDeck[0];
+            CardSO card = sceneDeck[0];
             sceneDeck.RemoveAt(0);
             cardsList.Insert(insertIndex,card);
             insertIndex = Random.Range(0, cardsList.Count);
         }
 
-        sceneDeck = new List<CardClass>(cardsList.ToArray());
+        sceneDeck = new List<CardSO>(cardsList.ToArray());
         print("Shuffled deck.");
     }
 
@@ -56,7 +58,7 @@ public class DeckManager : MonoBehaviour
             return false;
         }
 
-        CardClass card = sceneDeck[0];
+        CardSO card = sceneDeck[0];
         if (UIDeckManager.Instance.SpawnCard(card))
         {
             sceneDeck.RemoveAt(0);
@@ -68,7 +70,15 @@ public class DeckManager : MonoBehaviour
 
     public void DrawToFillHand()
     {
-        while (DrawCard()) {}
+        StartCoroutine(IDrawToFillHand());
+    }
+
+    IEnumerator IDrawToFillHand()
+    {
+        while (DrawCard())
+        {
+            yield return new WaitForSeconds(timeBetweenDraws);
+        }
     }
     
     // Clear hand,deck, and field.
@@ -80,14 +90,21 @@ public class DeckManager : MonoBehaviour
     // For Debugging only
     public void InitializeSceneDeck()
     {
-        sceneDeck = new List<CardClass>(deckSO.cards);
+        sceneDeck = new List<CardSO>(deckSO.cards);
     }
 
     void Start()
+    { 
+        StartCoroutine(ISetupDeck());
+    }
+
+    IEnumerator ISetupDeck()
     {
-        sceneDeck = new List<CardClass>(deckSO.cards);
+        sceneDeck = new List<CardSO>(deckSO.cards);
         InitializeSceneDeck();
         ShuffleDeck();
+        
+        yield return new WaitForSeconds(waitBeforeFirstDraw);
         DrawToFillHand();
     }
     

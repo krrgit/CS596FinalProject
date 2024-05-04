@@ -19,19 +19,11 @@ public class EnemyPool : MonoBehaviour
     private LevelProgress levelProgress;
     private void Start()
     {
-        levelProgress = FindObjectOfType<LevelProgress>();
+        levelProgress = LevelProgress.Instance;
         StartCoroutine(SpawnEnemiesSlowly());
-    }
 
-    private void Update()
-    {
-        if (isSpawning)
-        {
-            StartCoroutine(SpawnEnemiesSlowly());
-            isSpawning = false;
-        }
+        isSpawning = true;
     }
-
     GameObject InstantiateEnemy(Vector3 spawnPosition)
     {
         GameObject newEnemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
@@ -54,7 +46,9 @@ public class EnemyPool : MonoBehaviour
             }
             yield return new WaitForSeconds(spawnTimerBetweenWaves);
         }
+
+        isSpawning = false;
         //Level finished when all enemies are dead
-        LevelProgress.Instance.SetFinishedSpawn();
+        levelProgress.SetFinishedSpawn();
     }
 }

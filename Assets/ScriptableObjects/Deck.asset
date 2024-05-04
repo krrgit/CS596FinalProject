@@ -13,46 +13,35 @@ MonoBehaviour:
   m_Name: Deck
   m_EditorClassIdentifier: 
   deckSize: 20
-  minAttack: 1
-  maxAttack: 9
+  cardpack:
+  - {fileID: 11400000, guid: cb367ef6d4f204bc295c27618836c7cd, type: 2}
+  - {fileID: 11400000, guid: 9f6be049f1cf842c29714be7af98f8f8, type: 2}
+  - {fileID: 11400000, guid: cb9c77c7ebc754d4da91ca26af764249, type: 2}
+  - {fileID: 11400000, guid: ad404e48ef16446b8bef902c8bfed2f4, type: 2}
+  - {fileID: 11400000, guid: 245d57fd485cd483091cba2453c31ec8, type: 2}
+  - {fileID: 11400000, guid: ccd65168bc79a40d1904173df6493f8b, type: 2}
+  - {fileID: 11400000, guid: 020be540f311b46b59d980adffadb160, type: 2}
+  - {fileID: 11400000, guid: 5f2f30f8236fd4d8a9b13db6750eba8b, type: 2}
+  - {fileID: 11400000, guid: a4c3ffbb51e694c22a45f3bc696e5cdb, type: 2}
+  - {fileID: 11400000, guid: fcb6852c41cfa4d4e87388dfa684f5ae, type: 2}
   cards:
-  - card: 0
-    attack: 5
-  - card: 2
-    attack: 2
-  - card: 3
-    attack: 8
-  - card: 2
-    attack: 7
-  - card: 6
-    attack: 8
-  - card: 4
-    attack: 6
-  - card: 9
-    attack: 7
-  - card: 2
-    attack: 8
-  - card: 0
-    attack: 4
-  - card: 7
-    attack: 2
-  - card: 2
-    attack: 7
-  - card: 8
-    attack: 4
-  - card: 3
-    attack: 4
-  - card: 8
-    attack: 9
-  - card: 4
-    attack: 2
-  - card: 4
-    attack: 7
-  - card: 4
-    attack: 8
-  - card: 0
-    attack: 2
-  - card: 8
-    attack: 6
-  - card: 5
-    attack: 9
+  - {fileID: 11400000, guid: 9f6be049f1cf842c29714be7af98f8f8, type: 2}
+  - {fileID: 11400000, guid: fcb6852c41cfa4d4e87388dfa684f5ae, type: 2}
+  - {fileID: 11400000, guid: 5f2f30f8236fd4d8a9b13db6750eba8b, type: 2}
+  - {fileID: 11400000, guid: fcb6852c41cfa4d4e87388dfa684f5ae, type: 2}
+  - {fileID: 11400000, guid: ad404e48ef16446b8bef902c8bfed2f4, type: 2}
+  - {fileID: 11400000, guid: fcb6852c41cfa4d4e87388dfa684f5ae, type: 2}
+  - {fileID: 11400000, guid: 5f2f30f8236fd4d8a9b13db6750eba8b, type: 2}
+  - {fileID: 11400000, guid: a4c3ffbb51e694c22a45f3bc696e5cdb, type: 2}
+  - {fileID: 11400000, guid: ccd65168bc79a40d1904173df6493f8b, type: 2}
+  - {fileID: 11400000, guid: ad404e48ef16446b8bef902c8bfed2f4, type: 2}
+  - {fileID: 11400000, guid: ccd65168bc79a40d1904173df6493f8b, type: 2}
+  - {fileID: 11400000, guid: 020be540f311b46b59d980adffadb160, type: 2}
+  - {fileID: 11400000, guid: ad404e48ef16446b8bef902c8bfed2f4, type: 2}
+  - {fileID: 11400000, guid: 5f2f30f8236fd4d8a9b13db6750eba8b, type: 2}
+  - {fileID: 11400000, guid: a4c3ffbb51e694c22a45f3bc696e5cdb, type: 2}
+  - {fileID: 11400000, guid: ad404e48ef16446b8bef902c8bfed2f4, type: 2}
+  - {fileID: 11400000, guid: cb9c77c7ebc754d4da91ca26af764249, type: 2}
+  - {fileID: 11400000, guid: 020be540f311b46b59d980adffadb160, type: 2}
+  - {fileID: 11400000, guid: 020be540f311b46b59d980adffadb160, type: 2}
+  - {fileID: 11400000, guid: 020be540f311b46b59d980adffadb160, type: 2}
