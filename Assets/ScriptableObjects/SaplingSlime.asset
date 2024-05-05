@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2311c551e98e14dbf89746ea981511df, type: 3}
   m_Name: SaplingSlime
-  m_EditorClassIdentifier: Assembly-CSharp::CardSO
+  m_EditorClassIdentifier: 
   cardName: Sapling Slime
-  cost: 1
+  cost: 2
   maxHealth: 10
   level: 1
+  attack: 2
+  defense: 3
+  description: This is a sample description of a card.
   prefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}

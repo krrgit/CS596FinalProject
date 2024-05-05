@@ -20,7 +20,10 @@ public class UICard : MonoBehaviour, IComparable
     [Header("UI Elements")] 
     [SerializeField] private TMP_Text tmpName;
     [SerializeField] private TMP_Text tmpCost;
+    [SerializeField] private TMP_Text tmpAttack;
+    [SerializeField] private TMP_Text tmpHealth;
     [SerializeField] private TMP_Text tmpDesc;
+    
     
     private int cardLayer;
 
@@ -70,6 +73,8 @@ public class UICard : MonoBehaviour, IComparable
         
         tmpName.text = cardSO.cardName;
         tmpCost.text = cardSO.cost.ToString();
+        tmpAttack.text = cardSO.attack.ToString();
+        tmpHealth.text = cardSO.health.ToString();
         tmpDesc.text = cardSO.description;
     }
 

@@ -7,7 +7,7 @@ using UnityEngine;
 // Spawns unit on field, given a class & grid cell.
 public class UnitSpawner : MonoBehaviour
 {
-    public GameObject[] cardDisplays;
+    public GameObject[] cardDisplays;   // These are the models used for the card faces.
     public static UnitSpawner Instance;
     
     void Awake()
