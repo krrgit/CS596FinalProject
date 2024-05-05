@@ -8,15 +8,25 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private  DeckSO deckSO;                                        // Actual deck. DO NOT MODIFY. 
     [Header("UI")] 
     [SerializeField] private UIDeckManager uiDeck;
+    [SerializeField] private GemCollector gemCollector;
     [Header("Parameters")]
     public int handSize = 5;                                                        // Max number of cards in hand. 
     [SerializeField] private bool enableStaleness = true;                           // Everytime this card returns to the deck, -1 to attack 
     [SerializeField] private float waitBeforeFirstDraw = 0.5f;
     [SerializeField] private float timeBetweenDraws = 0.1f;
+    [SerializeField] private int drawHandCost = 1;
+    [SerializeField] private bool isDrawingCards;
+    
     [Header("Lists")]
     [SerializeField] private List<CardSO> sceneDeck = new List<CardSO>();     // Scene instance of the deck. This is to avoid changing the actual deck.
+    
+    
+    public static DeckManager Instance;
 
-    public static DeckManager Instance; 
+    public bool IsDrawingCards
+    {
+        get { return isDrawingCards; }
+    }
     
     void Awake()
     {
@@ -70,15 +80,22 @@ public class DeckManager : MonoBehaviour
 
     public void DrawToFillHand()
     {
-        StartCoroutine(IDrawToFillHand());
+        if (drawHandCost <= gemCollector.GetGemCount())
+        {
+            StartCoroutine(IDrawToFillHand());
+        }
     }
 
     IEnumerator IDrawToFillHand()
     {
+        
+        isDrawingCards = true;
         while (DrawCard())
         {
             yield return new WaitForSeconds(timeBetweenDraws);
         }
+
+        isDrawingCards = false;
     }
     
     // Clear hand,deck, and field.

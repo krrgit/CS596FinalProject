@@ -110,4 +110,20 @@ public class UIDeckManager : MonoBehaviour
             xPos += cardSpacing;
         }
     }
+
+    public void Redraw()
+    {
+        if (DeckManager.Instance.IsDrawingCards) return;
+        
+        foreach (var card in uiCards)
+        {
+            DeckManager.Instance.ReturnFieldCardToDeck(card.CardSO);
+            Destroy(card.gameObject);
+            cardCount--;
+        }
+        uiCards.Clear();
+        cardCount = 0;
+        
+        DeckManager.Instance.DrawToFillHand();
+    }
 }

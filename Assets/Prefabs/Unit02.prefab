@@ -178,7 +178,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 796c6e7387003429e8bd04e1b3eb86a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardClass:
-    card: 0
-    attack: 0
+  cardSO: {fileID: 0}
+  gridCell: {fileID: 0}
+  level: 1
+  maxLevel: 3
+  currExp: 0
+  totalExp: 0
+  expRequirements: 010000000200000003000000
   health: {fileID: 9076575489451304936}

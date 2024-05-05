@@ -74,7 +74,7 @@ public class UICardHolder : MonoBehaviour
                         } 
                         else if (hit.collider.CompareTag("UIDeck"))
                         {
-                            DeckManager.Instance.DrawCard();
+                            UIDeckManager.Instance.Redraw();
                         }
                     }
                 }
@@ -99,9 +99,11 @@ public class UICardHolder : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             gridCell cell = hit.transform.gameObject.GetComponent<gridCell>();
+            CardUnit unit = hit.transform.gameObject.GetComponent<CardUnit>();
             // hit cell & is open
             if (cell && cell.isOpen)
             {
+                // Play Card 
                 if (uiCard.CardSO.cost <= gemCollector.GetGemCount())
                 {
                     print("Spawn Card");
@@ -115,6 +117,21 @@ public class UICardHolder : MonoBehaviour
                 else
                 {
                     print("Insufficient Gems.");
+                }
+            } else if (unit)
+            {
+                // Check if the same card
+                if (unit.cardSO.cardName == uiCard.CardSO.cardName)
+                {
+                    // Use Card as EXP
+                    if (uiCard.CardSO.cost <= gemCollector.GetGemCount() && unit.AddExp())
+                    {
+                        cardHeld = false;
+                        uiCard.PlayCard();
+                        uiCard = null;
+                        UIDeckManager.Instance.DecrementCardCount();
+                        return;
+                    }
                 }
             }
         }

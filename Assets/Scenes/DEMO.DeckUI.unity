@@ -154,10 +154,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deckSO: {fileID: 11400000, guid: 76661f7aa1be14c2781d97ffa4187a25, type: 2}
   uiDeck: {fileID: 0}
+  gemCollector: {fileID: 869259417}
   handSize: 5
   enableStaleness: 1
   waitBeforeFirstDraw: 0.5
   timeBetweenDraws: 0.33
+  drawHandCost: 1
+  isDrawingCards: 0
   sceneDeck: []
 --- !u!4 &79464261
 Transform:
@@ -372,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardHeld: 0
   minDist: 2.75
-  holdTimer: 0.4
+  holdTimer: 0.3
   gemCollector: {fileID: 869259417}
   uiCard: {fileID: 0}
   dropOnRelease: 0
