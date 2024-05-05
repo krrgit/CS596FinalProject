@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Basic Slime
   cost: 1
-  maxHealth: 10
+  health: 1
+  attack: 1
   level: 1
-  description: This is a sample description of a card.
-  prefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  description: Deals 1 damage.
+  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  facePrefab: {fileID: 3668116956201739857, guid: 15e2b1578998a4ccbb3753717043f3f9, type: 3}

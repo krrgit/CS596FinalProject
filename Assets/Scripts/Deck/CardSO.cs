@@ -11,5 +11,6 @@ public class CardSO : ScriptableObject
     public int attack = 2;
     public int level = 1;
     public string description = "This is a sample description of a card.";
-    public GameObject prefab;
+    public GameObject unitPrefab; // The prefab that gets spawned on the field
+    public GameObject facePrefab;  // The prefab that is displayed on the face of the card
 }

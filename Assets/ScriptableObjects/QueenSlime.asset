@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: QueenSlime
   m_EditorClassIdentifier: 
   cardName: Queen Slime
-  cost: 6
-  maxHealth: 10
+  cost: 1
+  health: 4
+  attack: 0
   level: 1
-  attack: 2
-  defense: 3
-  description: This is a sample description of a card.
-  prefab: {fileID: 9076575489451304929, guid: d11ae746ab4ff4b16bae0ffbeaa17645, type: 3}
+  description: AOE buff.
+  unitPrefab: {fileID: 9076575489451304929, guid: d11ae746ab4ff4b16bae0ffbeaa17645, type: 3}
+  facePrefab: {fileID: 8716612672008579672, guid: 15dd27ad322b2452bbccfa8cc8ffe083, type: 3}

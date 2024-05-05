@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: PlantSlime
   m_EditorClassIdentifier: 
   cardName: Plant Slime
-  cost: 6
-  maxHealth: 10
+  cost: 1
+  health: 3
+  attack: 3
   level: 1
-  attack: 2
-  defense: 3
-  description: This is a sample description of a card.
-  prefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  description: Sprays 2 seeds.
+  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  facePrefab: {fileID: 3425632168493511056, guid: bccf5cbe472b94b00a332846b6912a65, type: 3}

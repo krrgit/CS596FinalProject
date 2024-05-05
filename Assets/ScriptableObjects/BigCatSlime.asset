@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BigCatSlime
   m_EditorClassIdentifier: 
   cardName: Big Cat Slime
-  cost: 4
-  maxHealth: 10
+  cost: 1
+  health: 3
+  attack: 3
   level: 1
-  attack: 2
-  defense: 3
-  description: This is a sample description of a card.
-  prefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  description: Long range melee attack.
+  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  facePrefab: {fileID: 1546071679448461157, guid: 56d6500cafb1c4e5a9722ef92d063f65, type: 3}

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: VikingSlime
   m_EditorClassIdentifier: 
   cardName: VIking Slime
-  cost: 6
-  maxHealth: 10
+  cost: 1
+  health: 6
+  attack: 1
   level: 1
-  attack: 2
-  defense: 3
-  description: This is a sample description of a card.
-  prefab: {fileID: 9076575489451304929, guid: 1e3835727ee0842518ff414c2fc6671a, type: 3}
+  description: Blocks lane & deals 1 damage to enemy
+  unitPrefab: {fileID: 9076575489451304929, guid: 1e3835727ee0842518ff414c2fc6671a, type: 3}
+  facePrefab: {fileID: 2423717591788751440, guid: 521c346ce9853412594287110b37187b, type: 3}

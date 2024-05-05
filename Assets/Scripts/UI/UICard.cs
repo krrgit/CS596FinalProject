@@ -63,10 +63,9 @@ public class UICard : MonoBehaviour, IComparable
 
     void UpdateUI()
     {
-        GameObject prefab = UnitSpawner.Instance.GetCardDisplay(cardSO.name);
-        if (prefab)
+        if (cardSO.facePrefab)
         {
-            var go = Instantiate(prefab, transform.position, transform.rotation);
+            var go = Instantiate(cardSO.facePrefab, transform.position, transform.rotation);
             go.transform.parent = transform;
             go.transform.localPosition = displayPos;
         }

@@ -158,7 +158,7 @@ MonoBehaviour:
   handSize: 5
   enableStaleness: 1
   waitBeforeFirstDraw: 0.5
-  timeBetweenDraws: 0.33
+  timeBetweenDraws: 0.19
   drawHandCost: 1
   isDrawingCards: 0
   sceneDeck: []
@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardHeld: 0
-  minDist: 2.75
+  minDist: 2
   holdTimer: 0.3
   gemCollector: {fileID: 869259417}
   uiCard: {fileID: 0}

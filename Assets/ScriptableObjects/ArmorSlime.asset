@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: ArmorSlime
   m_EditorClassIdentifier: 
   cardName: Armor Slime
-  cost: 3
-  maxHealth: 10
+  cost: 1
+  health: 5
+  attack: 0
   level: 1
-  attack: 2
-  defense: 3
-  description: This is a sample description of a card.
-  prefab: {fileID: 9076575489451304929, guid: 1e3835727ee0842518ff414c2fc6671a, type: 3}
+  description: Blocks lane.
+  unitPrefab: {fileID: 9076575489451304929, guid: 1e3835727ee0842518ff414c2fc6671a, type: 3}
+  facePrefab: {fileID: 7928167938489035327, guid: e0fb2a4ecac2d47d3ba950565b229b41, type: 3}
