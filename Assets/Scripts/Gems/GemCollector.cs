@@ -39,4 +39,9 @@ public class GemCollector : MonoBehaviour
     {
         return gem_count;
     }
+
+    public void DecrementGemCount(int value)
+    {
+        gem_count -= value;
+    }
 }
