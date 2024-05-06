@@ -9,7 +9,8 @@ TagManager:
   - Wall
   - Bullet
   - Gem
-  - TreasureChest
+  - UICard
+  - UIDeck
   layers:
   - Default
   - TransparentFX

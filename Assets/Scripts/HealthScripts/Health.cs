@@ -8,6 +8,10 @@ public class Health : MonoBehaviour
     public float DPS = 10; // Change it whenever for enemy/slime attack
     public bool godMode = false; // toggle
 
+    public delegate void OnDeathDelegate();
+
+    public OnDeathDelegate OnDeathEvent;
+        
     void Start()
     {
         health = startHealth;
@@ -28,8 +32,9 @@ public class Health : MonoBehaviour
 
     // Death
     private void Death()
-    {
-       Destroy(gameObject);
+    { 
+        OnDeathEvent?.Invoke(); 
+        Destroy(gameObject);
     }
 
     // Toggle for GodMode

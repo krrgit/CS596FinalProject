@@ -9,12 +9,22 @@ public class gridCell : MonoBehaviour
     [SerializeField] private Color baseColor;
     [SerializeField] private Color offsetColor;
     [SerializeField] private Renderer renderer;
+    public bool isOpen = true;
     private Color origColor;
+
+    public bool isHighlighted;
 
     private void Start()
     {
         origColor = renderer.material.color;
     }
+
+    private void OnMouseDown()
+    {
+        //inputManager.CellClick(this);
+        print("clicked cell at: " + transform.position);
+    }
+
 
     public void Init(bool isOffset)
     {
@@ -26,11 +36,18 @@ public class gridCell : MonoBehaviour
     {
         Color newColor = new Color(1f, 1f, 1f, .01f);
         renderer.material.color = newColor;
+        isHighlighted = true;
     }
 
     private void OnMouseExit()
     {
         renderer.material.color = origColor;
+        isHighlighted = false;
     }
-    
+
+
+    public Vector3 GetCellPosition()
+    {
+        return transform.position;
+    }
 }

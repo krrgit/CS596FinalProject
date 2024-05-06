@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1358644685893621712}
   moveDirection: {x: 0, y: 0, z: 1}
-  moveSpeed: 1
+  moveSpeed: 0.5
   attackCooldown: 1
   enemyDamage: 10
   currentState: 0
@@ -150,4 +150,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   startHealth: 100
-  DPS: 10
