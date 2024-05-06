@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class GemCollector : MonoBehaviour
 {
-    [SerializeField]private int gem_count = 0;
+    [SerializeField]private int gem_count = 0; 
+
+    public delegate void GemCollectedDelegate(int gem_count);
+    public GemCollectedDelegate GemCollectedEvent;
 
     void Update()
     {
@@ -30,6 +33,8 @@ public class GemCollector : MonoBehaviour
     {
         Debug.Log("Gem collected!");
         gem_count++;
+        
+        GemCollectedEvent?.Invoke(gem_count);
         
         // destroy the collected gem
         Destroy(gem);
