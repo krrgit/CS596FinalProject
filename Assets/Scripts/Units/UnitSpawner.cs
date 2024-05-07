@@ -18,10 +18,11 @@ public class UnitSpawner : MonoBehaviour
     public void SpawnUnit(CardSO cardSO, gridCell gridCell)
     {
         gridCell.isOpen = false;
-        var go = Instantiate(cardSO.unitPrefab, gridCell.GetCellPosition(), Quaternion.identity);
+        var go = Instantiate(cardSO.unitPrefab, gridCell.GetCellPosition(), cardSO.unitPrefab.transform.rotation);
         var card = go.GetComponent<CardUnit>();
         go.transform.parent = transform;
         card.cardSO = cardSO;
         card.gridCell = gridCell;
+        gridCell.SetOccupyingUnit(card);
     }
 }

@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 3
   level: 1
   description: Long range melee attack.
-  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  unitPrefab: {fileID: 7204158358099583986, guid: a282da6fcd5b91e40b8335c5597aa51b, type: 3}
   facePrefab: {fileID: 1546071679448461157, guid: 56d6500cafb1c4e5a9722ef92d063f65, type: 3}
