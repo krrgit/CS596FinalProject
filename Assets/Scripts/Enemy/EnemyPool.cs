@@ -16,10 +16,10 @@ public class EnemyPool : MonoBehaviour
     public float spawnTimerBetweenEnemies = 1.0f;
     [SerializeField] bool isSpawning = false;
 
-    private LevelProgress levelProgress;
+    private LevelManager levelProgress;
     private void Start()
     {
-        levelProgress = LevelProgress.Instance;
+        levelProgress = LevelManager.Instance;
         StartCoroutine(SpawnEnemiesSlowly());
 
         isSpawning = true;

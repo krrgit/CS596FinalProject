@@ -46,5 +46,11 @@ public class GridManager : MonoBehaviour
         Vector3 cellPosition = new Vector3(Random.Range(0,(numColumns - 1)), 1f, 0);
         return cellPosition;
     }
+
+    public Vector3 GetEnemySpawnPosition(int lane)
+    {
+        Vector3 position = new Vector3(lane, 0f, -2f);
+        return position;
+    }
     
 }

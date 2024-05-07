@@ -22,7 +22,7 @@ public class gridCell : MonoBehaviour
     private void OnMouseDown()
     {
         //inputManager.CellClick(this);
-        print("clicked cell at: " + transform.position);
+        //print("clicked cell at: " + transform.position);
     }
 
 

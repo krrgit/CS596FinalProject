@@ -58,7 +58,7 @@ public class UICard : MonoBehaviour, IComparable
 
     void MoveCard()
     {
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * moveLerp);
+        transform.position = Vector3.Lerp(transform.position, targetPos, Time.unscaledDeltaTime * moveLerp);
     }
 
     void UpdateUI()
@@ -102,9 +102,9 @@ public class UICard : MonoBehaviour, IComparable
         float duration = 0.5f;
         while (duration > 0)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, newRot, Time.deltaTime * rotateLerp);
+            transform.rotation = Quaternion.Lerp(transform.rotation, newRot, Time.unscaledDeltaTime * rotateLerp);
             yield return new WaitForEndOfFrame();
-            duration -= Time.deltaTime;
+            duration -= Time.unscaledDeltaTime;
         }
     }
 

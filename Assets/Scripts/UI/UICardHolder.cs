@@ -110,8 +110,8 @@ public class UICardHolder : MonoBehaviour
                     UnitSpawner.Instance.SpawnUnit(uiCard.CardSO, cell);
                     cardHeld = false;
                     uiCard.PlayCard();
+                    UIDeckManager.Instance.DecrementCardCount(uiCard);
                     uiCard = null;
-                    UIDeckManager.Instance.DecrementCardCount();
                     return;
                 }
                 else
@@ -128,8 +128,8 @@ public class UICardHolder : MonoBehaviour
                     {
                         cardHeld = false;
                         uiCard.PlayCard();
+                        UIDeckManager.Instance.DecrementCardCount(uiCard);
                         uiCard = null;
-                        UIDeckManager.Instance.DecrementCardCount();
                         return;
                     }
                 }
@@ -155,7 +155,7 @@ public class UICardHolder : MonoBehaviour
     IEnumerator IHoldTimer()
     {
         dropOnRelease = false;
-        yield return new WaitForSeconds(holdTimer);
+        yield return new WaitForSecondsRealtime(holdTimer);
         if (cardHeld)
         {
             dropOnRelease = true;

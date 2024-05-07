@@ -10,6 +10,7 @@ public class UIDeckManager : MonoBehaviour
     [SerializeField] Transform firstCardTransform;
     [SerializeField] private Transform cardParent;
     [SerializeField] private Transform cardSpawnPoint;
+    [SerializeField] private BoxCollider boxCollider;
     [Header("Layout")]
     [SerializeField] private float cardSpacing = 1.0f;
     [SerializeField] private int cardCount = 0;
@@ -19,13 +20,16 @@ public class UIDeckManager : MonoBehaviour
     
     public static UIDeckManager Instance;
 
-    
+    public int CardCount
+    {
+        get { return cardCount; }
+    }
     void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(this);
     }
-    
+
     // Adds a card from the deck to hand
     public bool SpawnCard(CardSO card)
     {
@@ -51,8 +55,13 @@ public class UIDeckManager : MonoBehaviour
         return true;
     }
 
-    public void DecrementCardCount()
+    public void DecrementCardCount(UICard uiCard)
     {
+        if (uiCards.Contains(uiCard))
+        {
+            uiCards.Remove(uiCard);
+            UpdateCardPositions();
+        }
         cardCount--;
     }
 

@@ -90,9 +90,11 @@ public class DeckManager : MonoBehaviour
     {
         
         isDrawingCards = true;
-        while (DrawCard())
+        int draws = handSize - UIDeckManager.Instance.CardCount;
+        while (draws > 0 && DrawCard())
         {
-            yield return new WaitForSeconds(timeBetweenDraws);
+            yield return new WaitForSecondsRealtime(timeBetweenDraws);
+            draws--;
         }
 
         isDrawingCards = false;
