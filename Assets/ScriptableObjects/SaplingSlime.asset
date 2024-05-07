@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 2
   level: 1
   description: Shoots 1 seed.
-  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  unitPrefab: {fileID: 6030489012038631720, guid: 705c6d6f60b1c474eb6e9ad64303182a, type: 3}
   facePrefab: {fileID: 1663543663021064217, guid: 55500d7bf856049acace11e8fbfc9e1f, type: 3}

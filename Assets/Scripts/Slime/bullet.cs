@@ -11,9 +11,14 @@ public class bullet : MonoBehaviour
     public float bulletDamage = 10.0f;
 
     // Update is called once per frame
+    void Start()
+    {
+        //print("BulletSpeed: " + bulletSpeed + "BulletDamage: " + bulletDamage );
+    }
     void Update()
     {
         transform.Translate(shootDirection * bulletSpeed * Time.deltaTime);
+        
     }
 
     private void OnTriggerEnter(Collider collision)

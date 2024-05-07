@@ -107,7 +107,8 @@ public class UICardHolder : MonoBehaviour
                 if (uiCard.CardSO.cost <= gemCollector.GetGemCount())
                 {
                     print("Spawn Card");
-                    UnitSpawner.Instance.SpawnUnit(uiCard.CardSO, cell);
+                    Quaternion rotation = Quaternion.Euler(0f,-180f,0f);
+                    UnitSpawner.Instance.SpawnUnit(uiCard.CardSO, cell, rotation);
                     cardHeld = false;
                     uiCard.PlayCard();
                     uiCard = null;

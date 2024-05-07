@@ -47,4 +47,17 @@ public class GridManager : MonoBehaviour
         return cellPosition;
     }
     
+    public void CheckUnitsOnGrid()
+    {
+        for (int col = 0; col < numColumns; col++)
+        {
+            for (int row = 0; row < numRows; row++)
+            {
+                gridCell cell = gridCells[row, col];
+
+            }
+        }
+    }
+    
+    
 }

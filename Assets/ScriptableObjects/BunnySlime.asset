@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 2
   level: 1
   description: AOE attack or range melee attack?
-  unitPrefab: {fileID: 9076575489451304929, guid: d11ae746ab4ff4b16bae0ffbeaa17645, type: 3}
+  unitPrefab: {fileID: 7571006568120231881, guid: dd0616b13925f244fb10231c3f3a1eb1, type: 3}
   facePrefab: {fileID: 5357703510895744962, guid: 13f2199289c72440e958043621447721, type: 3}

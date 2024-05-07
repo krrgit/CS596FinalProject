@@ -15,13 +15,14 @@ public class UnitSpawner : MonoBehaviour
         else Destroy(this);
     }
     
-    public void SpawnUnit(CardSO cardSO, gridCell gridCell)
+    public void SpawnUnit(CardSO cardSO, gridCell gridCell, Quaternion rotation)
     {
         gridCell.isOpen = false;
-        var go = Instantiate(cardSO.unitPrefab, gridCell.GetCellPosition(), Quaternion.identity);
+        var go = Instantiate(cardSO.unitPrefab, gridCell.GetCellPosition(), rotation);
         var card = go.GetComponent<CardUnit>();
         go.transform.parent = transform;
         card.cardSO = cardSO;
         card.gridCell = gridCell;
+        gridCell.SetOccupyingUnit(card);
     }
 }

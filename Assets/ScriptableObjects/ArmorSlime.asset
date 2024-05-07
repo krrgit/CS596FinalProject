@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 0
   level: 1
   description: Blocks lane.
-  unitPrefab: {fileID: 9076575489451304929, guid: 1e3835727ee0842518ff414c2fc6671a, type: 3}
+  unitPrefab: {fileID: 3813256387970911781, guid: d4a7de32d4a6d564e8c2bf016e658fb0, type: 3}
   facePrefab: {fileID: 7928167938489035327, guid: e0fb2a4ecac2d47d3ba950565b229b41, type: 3}

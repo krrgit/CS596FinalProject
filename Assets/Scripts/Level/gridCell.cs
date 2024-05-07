@@ -13,7 +13,7 @@ public class gridCell : MonoBehaviour
     private Color origColor;
 
     public bool isHighlighted;
-
+    public CardUnit OccupyingUnit { get; private set; }
     private void Start()
     {
         origColor = renderer.material.color;
@@ -50,4 +50,16 @@ public class gridCell : MonoBehaviour
     {
         return transform.position;
     }
+
+    public void SetOccupyingUnit(CardUnit unit)
+    {
+        OccupyingUnit = unit;
+    }
+
+    public void RemoveOccupyingUnit()
+    {
+        OccupyingUnit = null;
+    }
+    
+    
 }
