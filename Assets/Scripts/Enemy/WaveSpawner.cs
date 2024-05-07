@@ -167,7 +167,10 @@ public class WaveSpawner : MonoBehaviour
             timeState = TimeState.Normal;
             Time.timeScale = 1;
             uiWaveDisplay.HideAllDisplays();
-            SpawnWave(waveData[currentWave]);
+            if (currentWave < waveData.Length)
+            {
+                SpawnWave(waveData[currentWave]);
+            }
         }
     }
 

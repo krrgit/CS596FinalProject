@@ -8,6 +8,11 @@ public class GemCollector : MonoBehaviour
     public delegate void GemCollectedDelegate(int gem_count);
     public GemCollectedDelegate GemCollectedEvent;
 
+    void Start()
+    {
+        GemCollectedEvent?.Invoke(gem_count);
+    }
+
     void Update()
     {
         // check for mouse click
@@ -48,5 +53,6 @@ public class GemCollector : MonoBehaviour
     public void DecrementGemCount(int value)
     {
         gem_count -= value;
+        GemCollectedEvent?.Invoke(gem_count);
     }
 }

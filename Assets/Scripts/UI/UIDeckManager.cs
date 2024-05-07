@@ -123,7 +123,7 @@ public class UIDeckManager : MonoBehaviour
     public void Redraw()
     {
         if (DeckManager.Instance.IsDrawingCards) return;
-        
+
         foreach (var card in uiCards)
         {
             DeckManager.Instance.ReturnFieldCardToDeck(card.CardSO);

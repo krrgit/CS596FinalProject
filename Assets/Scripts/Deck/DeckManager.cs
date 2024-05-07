@@ -80,10 +80,7 @@ public class DeckManager : MonoBehaviour
 
     public void DrawToFillHand()
     {
-        if (drawHandCost <= gemCollector.GetGemCount())
-        {
-            StartCoroutine(IDrawToFillHand());
-        }
+        StartCoroutine(IDrawToFillHand());
     }
 
     IEnumerator IDrawToFillHand()
@@ -126,8 +123,4 @@ public class DeckManager : MonoBehaviour
         yield return new WaitForSeconds(waitBeforeFirstDraw);
         DrawToFillHand();
     }
-    
-    
-    
-    
 }

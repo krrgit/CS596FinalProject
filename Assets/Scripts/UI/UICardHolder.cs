@@ -74,7 +74,11 @@ public class UICardHolder : MonoBehaviour
                         } 
                         else if (hit.collider.CompareTag("UIDeck"))
                         {
-                            UIDeckManager.Instance.Redraw();
+                            if (gemCollector.GetGemCount() >= 1)
+                            {
+                                UIDeckManager.Instance.Redraw();
+                                gemCollector.DecrementGemCount(1);
+                            }
                         }
                     }
                 }
@@ -107,6 +111,7 @@ public class UICardHolder : MonoBehaviour
                 if (uiCard.CardSO.cost <= gemCollector.GetGemCount())
                 {
                     print("Spawn Card");
+                    gemCollector.DecrementGemCount(uiCard.CardSO.cost);
                     UnitSpawner.Instance.SpawnUnit(uiCard.CardSO, cell);
                     cardHeld = false;
                     uiCard.PlayCard();
@@ -126,6 +131,7 @@ public class UICardHolder : MonoBehaviour
                     // Use Card as EXP
                     if (uiCard.CardSO.cost <= gemCollector.GetGemCount() && unit.AddExp())
                     {
+                        gemCollector.DecrementGemCount(uiCard.CardSO.cost);
                         cardHeld = false;
                         uiCard.PlayCard();
                         UIDeckManager.Instance.DecrementCardCount(uiCard);
