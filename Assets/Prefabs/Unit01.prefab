@@ -142,7 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9076575489451304929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
+  m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
@@ -166,6 +166,9 @@ MonoBehaviour:
   shotsPerBurst: 3
   timeBetweenShots: 1
   burstDelay: 4
+  atkSpeedMultiplier: 0
+  damageBonus: 0
+  canBuff: 0
 --- !u!114 &4996999626702254275
 MonoBehaviour:
   m_ObjectHideFlags: 0

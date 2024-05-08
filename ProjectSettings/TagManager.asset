@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Ground
   - Tractor
+  - Enemy
+  - Wall
+  - UIDeck
+  - UICard
+  - Gem
+  - gridCell
+  - Bullet
   layers:
   - Default
   - TransparentFX
