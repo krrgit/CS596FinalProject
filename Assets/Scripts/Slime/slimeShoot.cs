@@ -102,4 +102,5 @@ public class slimeShoot : MonoBehaviour
             isLvl2 = false;
         }
     }
+
 }

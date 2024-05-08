@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: -8559335025164896052}
   - component: {fileID: 7610157998136527303}
   - component: {fileID: 7596201775057899980}
+  - component: {fileID: 551604284336094682}
   m_Layer: 0
   m_Name: VikingSlime
   m_TagString: Player
@@ -269,6 +270,20 @@ CapsuleCollider:
   m_Height: 0.67223203
   m_Direction: 1
   m_Center: {x: -0.031938165, y: 0.26761132, z: -0.0076185265}
+--- !u!114 &551604284336094682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5716508210901062785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 325e603d0a6bd844495c3bcc30966373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VikingHealth: 50
+  damage: 5
 --- !u!1 &6461060082226717721
 GameObject:
   m_ObjectHideFlags: 0
