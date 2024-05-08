@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CatSlimeShoot : MonoBehaviour
+public class RabbitSlimeShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -18,8 +18,7 @@ public class CatSlimeShoot : MonoBehaviour
     private bool isLvl2 = false;
     private bool isLvl3 = false;
     private CardUnit cardUnit;
-
-    public int additionalPierceCount = 0;
+    public float longerSlow = 0;
     void Start()
     {
         cardUnit = GetComponent<CardUnit>();
@@ -57,9 +56,10 @@ public class CatSlimeShoot : MonoBehaviour
         
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
-
-        BulletPierce bulletScript = newBullet.GetComponent<BulletPierce>();
-        bulletScript.maxPierceCount += additionalPierceCount;
+        
+        BulletSlow bulletScript = newBullet.GetComponent<BulletSlow>();
+        bulletScript.slowDuration += longerSlow;
+        print("slow duration: " + bulletScript.slowDuration);
         if (canBuff)
         {
             bulletScript.bulletDamage += damageBonus;
@@ -93,17 +93,11 @@ public class CatSlimeShoot : MonoBehaviour
 
         if (newLevel == 2)
         {
-            isLvl2 = true;
-            shotsPerBurst += 1;
-            additionalPierceCount = 1;
+            longerSlow = 2f;
         }
         else if (newLevel == 3)
         {
-            shotsPerBurst += 1;
-            isLvl3 = true;
-            isLvl2 = false;
-            additionalPierceCount = 100;
+            longerSlow = 4f;
         }
     }
-
 }

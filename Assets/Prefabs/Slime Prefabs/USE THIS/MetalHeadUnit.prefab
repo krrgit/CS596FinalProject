@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 846553776961875678}
   - component: {fileID: 7071397819190178444}
-  - component: {fileID: 6007219009438843373}
   - component: {fileID: 9111039782108278328}
   - component: {fileID: 8037529545546560124}
+  - component: {fileID: 5205164861204687102}
   m_Layer: 0
   m_Name: MetalHeadUnit
   m_TagString: Untagged
@@ -51,22 +51,6 @@ CapsuleCollider:
   m_Height: 0.67223203
   m_Direction: 1
   m_Center: {x: -0.031938165, y: 0.26761132, z: -0.0076185265}
---- !u!114 &6007219009438843373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4282565028619711213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
-  godMode: 0
 --- !u!114 &9111039782108278328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +70,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
-  health: {fileID: 6007219009438843373}
+  health: {fileID: 5205164861204687102}
 --- !u!114 &8037529545546560124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +84,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArmorHealth: 50
+--- !u!114 &5205164861204687102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282565028619711213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  startHealth: 100
+  DPS: 10
+  godMode: 0
 --- !u!1 &8022791272633516509
 GameObject:
   m_ObjectHideFlags: 0

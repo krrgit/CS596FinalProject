@@ -75,11 +75,11 @@ public class QueenSlime : MonoBehaviour
 
             if (cell != null && cell.OccupyingUnit != null)
             {
-                if (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
+                /*if (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
                     cell.OccupyingUnit.cardSO.cardName == "Plant Slime")
                 {
                     ApplyBuff(cell);
-                }
+                }*/ApplyBuff(cell);
             }
         }
     
@@ -99,11 +99,11 @@ public class QueenSlime : MonoBehaviour
 
                 if (cell != null && cell.OccupyingUnit != null)
                 {
-                    if (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
+                    /*if (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
                         cell.OccupyingUnit.cardSO.cardName == "Plant Slime")
                     {
                         ApplyBuff(cell);
-                    }
+                    }*/ApplyBuff(cell);
                 }
             }
         }
@@ -116,9 +116,7 @@ public class QueenSlime : MonoBehaviour
         {
             gridCell cell = gridManager.gridCells[row, col];
             print(cell.transform.position);
-            if (cell != null && cell.OccupyingUnit != null &&
-                (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
-                 cell.OccupyingUnit.cardSO.cardName == "Plant Slime"))
+            if (cell != null && cell.OccupyingUnit != null )
             {
                 ApplyBuff(cell);
             }

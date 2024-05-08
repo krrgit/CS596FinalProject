@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7407358260666761749}
   - component: {fileID: 7207963407575234183}
   - component: {fileID: 1840460147631067214}
-  - component: {fileID: 1200568290288826339}
+  - component: {fileID: 8018569514714715853}
   m_Layer: 0
   m_Name: VikingSlimeUnit
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
-  health: {fileID: 1200568290288826339}
+  health: {fileID: 8018569514714715853}
 --- !u!114 &1840460147631067214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   VikingHealth: 50
   damage: 5
   attackCooldown: 1
---- !u!114 &1200568290288826339
+--- !u!114 &8018569514714715853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4520230244258358382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
+  m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0

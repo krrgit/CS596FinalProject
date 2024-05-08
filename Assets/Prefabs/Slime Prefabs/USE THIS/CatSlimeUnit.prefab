@@ -108,9 +108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 870531835722952569}
   - component: {fileID: 1806035232555217346}
-  - component: {fileID: 7831921759854241835}
   - component: {fileID: 9210903923138187080}
   - component: {fileID: 3334340027426039357}
+  - component: {fileID: 1968768534004585514}
   m_Layer: 0
   m_Name: CatSlimeUnit
   m_TagString: Untagged
@@ -149,22 +149,6 @@ CapsuleCollider:
   m_Height: 0.67223203
   m_Direction: 1
   m_Center: {x: -0.031938165, y: 0.26761132, z: -0.0076185265}
---- !u!114 &7831921759854241835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6013140982197722599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
-  godMode: 0
 --- !u!114 &9210903923138187080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +168,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
-  health: {fileID: 7831921759854241835}
+  health: {fileID: 1968768534004585514}
 --- !u!114 &3334340027426039357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +189,23 @@ MonoBehaviour:
   atkSpeedMultiplier: 0
   damageBonus: 0
   canBuff: 0
+  additionalPierceCount: 0
+--- !u!114 &1968768534004585514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6013140982197722599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  startHealth: 100
+  DPS: 10
+  godMode: 0
 --- !u!1001 &5873587008509724804
 PrefabInstance:
   m_ObjectHideFlags: 0

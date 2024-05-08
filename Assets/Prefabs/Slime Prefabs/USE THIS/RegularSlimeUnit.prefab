@@ -109,8 +109,8 @@ GameObject:
   - component: {fileID: 6907629113084491989}
   - component: {fileID: 4400562849616235988}
   - component: {fileID: 6224159129895563799}
-  - component: {fileID: 6398026148138953346}
   - component: {fileID: 8968450310935572185}
+  - component: {fileID: 6873057193215816765}
   m_Layer: 0
   m_Name: RegularSlimeUnit
   m_TagString: Untagged
@@ -174,23 +174,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
-  health: {fileID: 6398026148138953346}
---- !u!114 &6398026148138953346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6271851871374733105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
-  godMode: 0
+  health: {fileID: 6873057193215816765}
 --- !u!136 &8968450310935572185
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -205,6 +189,22 @@ CapsuleCollider:
   m_Height: 0.67223203
   m_Direction: 1
   m_Center: {x: -0.031938165, y: 0.26761132, z: -0.0076185265}
+--- !u!114 &6873057193215816765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271851871374733105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  startHealth: 100
+  DPS: 10
+  godMode: 0
 --- !u!1001 &8450721090583450967
 PrefabInstance:
   m_ObjectHideFlags: 0
