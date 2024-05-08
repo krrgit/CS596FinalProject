@@ -121,6 +121,37 @@ Transform:
   m_Father: {fileID: 8270791627014698070}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4076680397889197941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6466933645219607465}
+  m_Layer: 0
+  m_Name: firePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6466933645219607465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076680397889197941}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0120000355, y: 0.33499998, z: 0.37000006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6363019908667943045}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4468768428555951333
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +228,8 @@ GameObject:
   - component: {fileID: 3513814975953644147}
   - component: {fileID: 596409774866907938}
   - component: {fileID: 8055950225353517620}
+  - component: {fileID: -493072711739810758}
+  - component: {fileID: 4078554808839701473}
   m_Layer: 0
   m_Name: CatSlime
   m_TagString: Player
@@ -211,16 +244,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5982517844642132543}
-  m_LocalRotation: {x: -0.17381239, y: -0.90496033, z: -0.33053613, w: 0.20391679}
-  m_LocalPosition: {x: 7, y: -6, z: 0}
+  m_LocalRotation: {x: -0.51125014, y: -0.78187263, z: -0.17024322, w: 0.3135536}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7483906223828854446}
   - {fileID: 329523661582144226}
+  - {fileID: 6466933645219607465}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -42, y: -160, z: 14}
+  m_LocalEulerAnglesHint: {x: -35.932, y: -157.01, z: 58.814}
 --- !u!136 &3513814975953644147
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -271,6 +305,39 @@ MonoBehaviour:
   totalExp: 0
   expRequirements: 010000000200000003000000
   health: {fileID: 596409774866907938}
+--- !u!114 &-493072711739810758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982517844642132543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335280c5d7ccfc44f81cdcab1262eb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 704340310107545808, guid: e1582bad6aedd6d4bba11359d6af3e94, type: 3}
+  firePoint: {fileID: 6466933645219607465}
+  shotsPerBurst: 1
+  timeBetweenShots: 1
+  burstDelay: 1
+  atkSpeedMultiplier: 0
+  damageBonus: 0
+  canBuff: 0
+--- !u!114 &4078554808839701473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982517844642132543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4fd9c701748a54c9aac0c83272b2b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 704340310107545808, guid: e1582bad6aedd6d4bba11359d6af3e94, type: 3}
 --- !u!1 &6680121718722854164
 GameObject:
   m_ObjectHideFlags: 0

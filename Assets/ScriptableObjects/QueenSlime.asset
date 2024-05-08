@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 0
   level: 1
   description: AOE buff.
-  unitPrefab: {fileID: 5408912700553067070, guid: 571650d4a9cf04e45a896dfca48a8f6a, type: 3}
+  unitPrefab: {fileID: 8328191008387286060, guid: 8fd9c46143a3c024d9e894c2b63f9a8d, type: 3}
   facePrefab: {fileID: 8716612672008579672, guid: 15dd27ad322b2452bbccfa8cc8ffe083, type: 3}

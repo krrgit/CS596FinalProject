@@ -21,7 +21,7 @@ public class UnitSpawner : MonoBehaviour
         var go = Instantiate(cardSO.unitPrefab, gridCell.GetCellPosition(), cardSO.unitPrefab.transform.rotation);
         var card = go.GetComponent<CardUnit>();
         go.transform.parent = transform;
-        card.cardSO = cardSO;
+         card.cardSO = cardSO;
         card.gridCell = gridCell;
         gridCell.SetOccupyingUnit(card);
     }

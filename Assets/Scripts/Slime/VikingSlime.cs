@@ -27,7 +27,6 @@ public class VikingSlime : MonoBehaviour
         if (newLevel == 2)
         {
             currvikingHealth.health += VikingHealth;
-            print(currvikingHealth.health);
         }
         else if (newLevel == 3)
         {

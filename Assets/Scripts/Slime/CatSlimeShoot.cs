@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class slimeShoot : MonoBehaviour
+public class CatSlimeShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -20,6 +19,7 @@ public class slimeShoot : MonoBehaviour
     private bool isLvl3 = false;
     private CardUnit cardUnit;
 
+    public int additionalPierceCount = 0;
     void Start()
     {
         cardUnit = GetComponent<CardUnit>();
@@ -58,8 +58,8 @@ public class slimeShoot : MonoBehaviour
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
 
-        bullet bulletScript = newBullet.GetComponent<bullet>();
-
+        BulletPierce bulletScript = newBullet.GetComponent<BulletPierce>();
+        bulletScript.maxPierceCount += additionalPierceCount;
         if (canBuff)
         {
             bulletScript.bulletDamage += damageBonus;
@@ -95,12 +95,14 @@ public class slimeShoot : MonoBehaviour
         {
             isLvl2 = true;
             shotsPerBurst += 1;
+            additionalPierceCount = 1;
         }
         else if (newLevel == 3)
         {
             shotsPerBurst += 1;
             isLvl3 = true;
             isLvl2 = false;
+            additionalPierceCount = 2;
         }
     }
 
