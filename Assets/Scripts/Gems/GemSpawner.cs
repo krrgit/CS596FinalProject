@@ -14,7 +14,7 @@ public class GemSpawner : MonoBehaviour
     {
         // commented out for testing so the sphere's drop from the start
         // drop the first sphere after dropInterval time
-        // nextDropTime = Time.time + dropInterval;
+        nextDropTime = Time.time + dropInterval;
     }
 
     void Update()
