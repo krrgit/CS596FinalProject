@@ -27,7 +27,7 @@ public class GridManager : MonoBehaviour
         {
             for (int row = 0; row < numRows; row++)
             {
-                Vector3 cellPosition = new Vector3(col, 0f, row);
+                Vector3 cellPosition = new Vector3(col, 0f, row) + transform.position;
                 gridCell cell = Instantiate(gridCellPrefab, cellPosition, Quaternion.identity);
                 cell.name = $"Cell {col} {row}";
                 cell.transform.SetParent(transform);

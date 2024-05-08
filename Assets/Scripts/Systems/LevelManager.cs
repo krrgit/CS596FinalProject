@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Level is finished when:
 // 1. No more enemies to spawn.
@@ -11,10 +13,15 @@ public class LevelManager : MonoBehaviour
     public bool levelFinished = false;
     [SerializeField] private bool finishedSpawn = false;
     [SerializeField] private Transform enemyPool;        // Contains all the enemy objects. 
-        
+    [SerializeField] private WaveSpawner waveSpawner;
+    [SerializeField] private Health playerHealth;
+    [SerializeField] private string mainMenuSceneName = "MainMenu";
+    
     // Notifies subscribers(other scripts) when the level finishes.
     public delegate void FinishedLevelDelegate();
     public FinishedLevelDelegate finishedLevelEvent;
+    public delegate void LostLevelDelegate();
+    public LostLevelDelegate lostLevelEvent;
 
     public static LevelManager Instance;
 
@@ -35,7 +42,17 @@ public class LevelManager : MonoBehaviour
             Destroy(this);
         }
     }
+
+    private void OnEnable()
+    {
+        playerHealth.OnDeathEvent += LostLevel;
+    }
     
+    private void OnDisable()
+    {
+        playerHealth.OnDeathEvent -= LostLevel;
+    }
+
     void Update()
     {
         LevelEndCheck();
@@ -57,5 +74,23 @@ public class LevelManager : MonoBehaviour
             finishedLevelEvent?.Invoke();
             print("LevelProgress: Level Finished.");
         }
+    }
+
+    void LostLevel()
+    {
+        waveSpawner.Pause();
+        lostLevelEvent?.Invoke();
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }
