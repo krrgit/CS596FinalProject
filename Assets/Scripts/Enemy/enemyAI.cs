@@ -23,6 +23,7 @@ public class enemyAI : MonoBehaviour
     
     private float origMoveSpeed;
     private bool isAlreadySlow = false;
+    public bool isPoisoned = false;
 
     public enum EnemyState : int
     {

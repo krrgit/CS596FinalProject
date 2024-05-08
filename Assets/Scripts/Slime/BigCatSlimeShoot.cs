@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RabbitSlimeShoot : MonoBehaviour
+public class BigCatSlimeShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -11,18 +11,16 @@ public class RabbitSlimeShoot : MonoBehaviour
     public float burstDelay = 2.0f;
 
     private bool canShoot = true;
-    public float atkSpeedMultiplier;
-    public int damageBonus;
 
-    public bool canBuff = false;
-    private bool isLvl2 = false;
-    private bool isLvl3 = false;
+    public bool isLvl2 = false;
+    public bool isLvl3 = false;
     private CardUnit cardUnit;
-    public float longerSlow = 0;
+    private BulletPoison bullet;
     void Start()
     {
         cardUnit = GetComponent<CardUnit>();
         cardUnit.LevelUpEvent += OnCardUnitLevelUp;
+        
     }
     void Update()
     {
@@ -57,9 +55,8 @@ public class RabbitSlimeShoot : MonoBehaviour
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
         
-        BulletSlow bulletScript = newBullet.GetComponent<BulletSlow>();
-        bulletScript.slowDuration += longerSlow;
-        print("slow duration: " + bulletScript.slowDuration);
+        BulletPoison bulletScript = newBullet.GetComponent<BulletPoison>();
+        
 
         StartCoroutine(DestroyBulletWhenOutOfView(newBullet));
     }
@@ -88,11 +85,11 @@ public class RabbitSlimeShoot : MonoBehaviour
 
         if (newLevel == 2)
         {
-            longerSlow = 2f;
+            isLvl2 = true;
         }
         else if (newLevel == 3)
         {
-            longerSlow = 4f;
+            isLvl3 = true;
         }
     }
 }

@@ -126,6 +126,8 @@ public class UICardHolder : MonoBehaviour
             } else if (unit)
             {
                 // Check if the same card
+                print(unit.cardSO.cardName);
+                print(uiCard.CardSO.cardName);
                 if (unit.cardSO.cardName == uiCard.CardSO.cardName)
                 {
                     // Use Card as EXP
