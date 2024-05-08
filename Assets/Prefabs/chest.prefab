@@ -183,4 +183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gemPrefab: {fileID: 9097521349935486349, guid: b2b17c1888c84f343976c0ce89a8bd36, type: 3}
   dropInterval: 10
-  spawnPosition: {x: 0, y: 2, z: 0}
+  spawnPosition: {x: 0, y: 0.5, z: 0}
+  spawnForce: 25
+  randomRadius: 0.4

@@ -10,9 +10,11 @@ public class UICardHolder : MonoBehaviour
     [SerializeField] private float holdTimer = 0.25f;  // Time to hold so that letting go drops the card.
     [SerializeField] private GemCollector gemCollector;
     [SerializeField] private UICard uiCard;
-    private Transform cameraTransform;
+    private Camera mainCam;
 
     [SerializeField] private bool dropOnRelease;
+
+    private UIDeckManager uiDeckManager;
     
     public static UICardHolder Instance;
     void Awake()
@@ -24,7 +26,8 @@ public class UICardHolder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameraTransform = Camera.main.transform;
+        mainCam = Camera.main;
+        uiDeckManager = UIDeckManager.Instance;
     }
 
     // Update is called once per frame
@@ -64,21 +67,13 @@ public class UICardHolder : MonoBehaviour
                 {
                     if (hit.collider != null)
                     {
-                        if (hit.collider.CompareTag("UICard"))
+                        if (TryPickupCard(hit.collider))
                         {
-                            print("Hold Card");
-                            cardHeld = true;
-                            uiCard = hit.collider.gameObject.GetComponent<UICard>();
-                            uiCard.HoldCard();
-                            StartCoroutine(IHoldTimer());
+                            return;
                         } 
-                        else if (hit.collider.CompareTag("UIDeck"))
+                        else if (TryRedrawCards(hit.collider))
                         {
-                            if (gemCollector.GetGemCount() >= 1)
-                            {
-                                UIDeckManager.Instance.Redraw();
-                                gemCollector.DecrementGemCount(1);
-                            }
+                            return;
                         }
                     }
                 }
@@ -91,6 +86,33 @@ public class UICardHolder : MonoBehaviour
         cardHeld = false;
         uiCard.ReturnCardToHand();
         uiCard = null;
+    }
+
+    private bool TryPickupCard(Collider hit)
+    {
+        if (hit.CompareTag("UICard"))
+        {
+            print("Pickup Card");
+            cardHeld = true;
+            uiCard = hit.gameObject.GetComponent<UICard>();
+            uiCard.HoldCard();
+            StartCoroutine(IHoldTimer());
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool TryRedrawCards(Collider hit)
+    {
+        if (hit.CompareTag("UIDeck") && gemCollector.GetGemCount() >= 1)
+        {
+            uiDeckManager.Redraw();
+            gemCollector.DecrementGemCount(1);
+            return true;
+        }
+
+        return false;
     }
 
     // Will either spawn the card or return it to hand.
@@ -150,12 +172,12 @@ public class UICardHolder : MonoBehaviour
     void UpdateCardPosition()
     {
         if (!uiCard) return;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         Physics.Raycast(ray, out hit);
             
         float dist = Mathf.Max(minDist, hit.distance);
-        Vector3 cardPos = dist * ray.direction + cameraTransform.position;
+        Vector3 cardPos = dist * ray.direction + mainCam.transform.position;
 
         uiCard.SetTargetPos(cardPos);
     }

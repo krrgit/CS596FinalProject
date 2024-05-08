@@ -9,8 +9,9 @@ public class Health : MonoBehaviour
     public bool godMode = false; // toggle
 
     public delegate void OnDeathDelegate();
-
     public OnDeathDelegate OnDeathEvent;
+    public delegate void OnTakeDamageDelegate(float currentHealth);
+    public OnTakeDamageDelegate OnDamageEvent;
         
     void Start()
     {
@@ -22,7 +23,8 @@ public class Health : MonoBehaviour
         if (!godMode) // Check if god mode is not enabled
         {
             health -= DPS;
-
+            
+            OnDamageEvent?.Invoke(health);
             if (health <= 0)
             {
                 Death();

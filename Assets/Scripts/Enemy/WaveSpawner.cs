@@ -252,7 +252,7 @@ public class WaveSpawner : MonoBehaviour
     
     void SpawnUnit(int lane, EnemyClass enemyClass)
     {
-        Vector3 position = gridManager.GetEnemySpawnPosition(lane);
+        Vector3 position = gridManager.GetEnemySpawnPosition(lane) + transform.position;
         var go = Instantiate(enemyPrefabs[(int)enemyClass], position, Quaternion.identity);
         go.transform.parent = transform;
     }
@@ -268,5 +268,7 @@ public class WaveSpawner : MonoBehaviour
         timeState = timeState != TimeState.FastForward ? TimeState.FastForward : TimeState.Normal;
         Time.timeScale = timeState == TimeState.FastForward ? 2 : 1;
     }
+    
+    
     
 }

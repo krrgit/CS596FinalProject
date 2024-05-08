@@ -8,6 +8,7 @@ public class GridManager : MonoBehaviour
     public int numRows;
     public int numColumns;
     public gridCell gridCellPrefab;
+    public gridCell gridCellAltPrefab;
     
     // 2D array to hold grid cells
     public gridCell[,] gridCells;
@@ -27,12 +28,13 @@ public class GridManager : MonoBehaviour
         {
             for (int row = 0; row < numRows; row++)
             {
-                Vector3 cellPosition = new Vector3(col, 0f, row);
-                gridCell cell = Instantiate(gridCellPrefab, cellPosition, Quaternion.identity);
+                bool isOffset = (row % 2 == 0 && col % 2 != 0) || (row % 2 != 0 && col % 2 == 0);
+                Vector3 cellPosition = new Vector3(col, 0f, row) + transform.position;
+                gridCell cell = Instantiate(isOffset ? gridCellAltPrefab : gridCellPrefab, cellPosition, Quaternion.identity);
                 cell.name = $"Cell {col} {row}";
                 cell.transform.SetParent(transform);
-                bool isOffset = (row % 2 == 0 && col % 2 != 0) || (row % 2 != 0 && col % 2 == 0);
                 cell.Init(isOffset);
+                
                 gridCells[row, col] = cell;
             }
         }

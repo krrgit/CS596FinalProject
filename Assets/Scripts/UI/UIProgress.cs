@@ -7,12 +7,17 @@ using UnityEngine.UI;
 
 public class UIProgress : MonoBehaviour
 {
+    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private WaveSpawner waveSpawner;
+    [SerializeField] private Health playerHealth;
+    [Header("UI Elements")]
     [SerializeField] private Image dayArrow;
     [SerializeField] private TMP_Text dayText;
     [SerializeField] private Slider progressSlider;
-    [SerializeField] private WaveSpawner waveSpawner;
-    [SerializeField] private GameObject endScreen;
-    [SerializeField] private LevelManager levelManager;
+    [SerializeField] private TMP_Text healthText;
+    [Header("Screens")]
+    [SerializeField] private GameObject finishedLevelUI;
+    [SerializeField] private GameObject lostLevelUI;
 
     private Vector3 arrowRotation;
     private int currentDay;
@@ -21,20 +26,24 @@ public class UIProgress : MonoBehaviour
     private void OnEnable()
     {
         waveSpawner.NewDayEvent += UpdateUI;
-        levelManager.finishedLevelEvent += DisplayEndScreen;
+        levelManager.finishedLevelEvent += DisplayFinishedLevelUI;
+        levelManager.lostLevelEvent += DislayLostLevelUI;
+        playerHealth.OnDamageEvent += UpdateHealth;
     }
     
     private void OnDisable()
     {
         waveSpawner.NewDayEvent -= UpdateUI;
-        levelManager.finishedLevelEvent -= DisplayEndScreen;
-
+        levelManager.finishedLevelEvent -= DisplayFinishedLevelUI;
+        levelManager.lostLevelEvent -= DislayLostLevelUI;
+        playerHealth.OnDamageEvent -= UpdateHealth;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        endScreen.SetActive(false);
+        finishedLevelUI.SetActive(false);
+        lostLevelUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -64,8 +73,18 @@ public class UIProgress : MonoBehaviour
         progressSlider.value = ((float)currentDay / totalDays) + (waveSpawner.DayPercent/ totalDays);
     }
 
-    void DisplayEndScreen()
+    void UpdateHealth(float health)
     {
-        endScreen.SetActive(true);   
+        healthText.text = ((int)health).ToString() + "/" + playerHealth.startHealth;
+    }
+
+    void DisplayFinishedLevelUI()
+    {
+        finishedLevelUI.SetActive(true);   
+    }
+
+    void DislayLostLevelUI()
+    {
+        lostLevelUI.SetActive(true);
     }
 }
