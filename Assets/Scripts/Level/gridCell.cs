@@ -60,6 +60,11 @@ public class gridCell : MonoBehaviour
     {
         OccupyingUnit = null;
     }
+
+    public bool isOccupied()
+    {
+        return OccupyingUnit != null;
+    }
     
     
 }

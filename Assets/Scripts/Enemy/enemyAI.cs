@@ -20,6 +20,11 @@ public class enemyAI : MonoBehaviour
     
     [SerializeField] private EnemyState currentState = EnemyState.Idle;
     [SerializeField] private EnemyState previousState;
+    
+    private float origMoveSpeed;
+    private bool isAlreadySlow = false;
+    public bool isPoisoned = false;
+
     public enum EnemyState : int
     {
         Idle,
@@ -42,6 +47,7 @@ public class enemyAI : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        origMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -64,6 +70,7 @@ public class enemyAI : MonoBehaviour
             default:
                 break;
         }
+        
     }
     
     void Move()
@@ -110,4 +117,23 @@ public class enemyAI : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         currentState = previousState;
     }
+
+    public void ApplySlowEffect(float duration, float factor)
+    {
+
+        StartCoroutine(SlowEffect(duration, factor));
+        
+    }
+
+    private IEnumerator SlowEffect(float duration, float factor)
+    {
+        if (moveSpeed >= origMoveSpeed)
+        {
+            moveSpeed *= factor;
+        }
+
+        yield return new WaitForSeconds(duration);
+        moveSpeed = origMoveSpeed;
+    }
+    
 }

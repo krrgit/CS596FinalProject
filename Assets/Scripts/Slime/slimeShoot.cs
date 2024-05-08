@@ -15,12 +15,19 @@ public class slimeShoot : MonoBehaviour
     public float atkSpeedMultiplier;
     public int damageBonus;
 
-
     public bool canBuff = false;
+    private bool isLvl2 = false;
+    private bool isLvl3 = false;
+    private CardUnit cardUnit;
 
-
+    void Start()
+    {
+        cardUnit = GetComponent<CardUnit>();
+        cardUnit.LevelUpEvent += OnCardUnitLevelUp;
+    }
     void Update()
     {
+
         if (canShoot)
         {
             StartCoroutine(ContinuousShoot());
@@ -50,13 +57,14 @@ public class slimeShoot : MonoBehaviour
         
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
+
         bullet bulletScript = newBullet.GetComponent<bullet>();
+
         if (canBuff)
         {
             bulletScript.bulletDamage += damageBonus;
             bulletScript.bulletSpeed += atkSpeedMultiplier;
         }
-        print("bullet damage: " + bulletScript.bulletDamage + "bullet speed: " + bulletScript.bulletSpeed);
 
         StartCoroutine(DestroyBulletWhenOutOfView(newBullet));
     }
@@ -79,4 +87,21 @@ public class slimeShoot : MonoBehaviour
             yield return null;
         }
     }
+    
+    private void OnCardUnitLevelUp(int newLevel)
+    {
+
+        if (newLevel == 2)
+        {
+            isLvl2 = true;
+            shotsPerBurst += 1;
+        }
+        else if (newLevel == 3)
+        {
+            shotsPerBurst += 1;
+            isLvl3 = true;
+            isLvl2 = false;
+        }
+    }
+
 }

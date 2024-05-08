@@ -75,8 +75,8 @@ public class QueenSlime : MonoBehaviour
 
             if (cell != null && cell.OccupyingUnit != null)
             {
-                if (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
-                    cell.OccupyingUnit.cardSO.cardName == "Plant Slime")
+                if ((cell.OccupyingUnit.cardSO.cardName != "Big Cat Slime") ||
+                    (cell.OccupyingUnit.cardSO.cardName != "Bunny Slime"))
                 {
                     ApplyBuff(cell);
                 }
@@ -99,8 +99,8 @@ public class QueenSlime : MonoBehaviour
 
                 if (cell != null && cell.OccupyingUnit != null)
                 {
-                    if (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
-                        cell.OccupyingUnit.cardSO.cardName == "Plant Slime")
+                    if (cell.OccupyingUnit.cardSO.cardName != "Big Cat Slime" ||
+                        cell.OccupyingUnit.cardSO.cardName != "Bunny Slime")
                     {
                         ApplyBuff(cell);
                     }
@@ -116,11 +116,13 @@ public class QueenSlime : MonoBehaviour
         {
             gridCell cell = gridManager.gridCells[row, col];
             print(cell.transform.position);
-            if (cell != null && cell.OccupyingUnit != null &&
-                (cell.OccupyingUnit.cardSO.cardName == "Sapling Slime" ||
-                 cell.OccupyingUnit.cardSO.cardName == "Plant Slime"))
+            if (cell != null && cell.OccupyingUnit != null )
             {
-                ApplyBuff(cell);
+                if (cell.OccupyingUnit.cardSO.cardName != "Big Cat Slime" ||
+                    cell.OccupyingUnit.cardSO.cardName != "Bunny Slime")
+                {
+                    ApplyBuff(cell);
+                }
             }
         }
     }
@@ -139,10 +141,13 @@ public class QueenSlime : MonoBehaviour
     void ApplyBuff(gridCell cell)
     {
         slimeShoot shoot = cell.OccupyingUnit.GetComponent<slimeShoot>();
-        shoot.canBuff = true;
-        shoot.damageBonus = damageBonus;
-        shoot.atkSpeedMultiplier = atkSpeedMultiplier;
-        shoot.timeBetweenShots = newTimebetweenShots;
+        if (shoot != null)
+        {
+            shoot.canBuff = true;
+            shoot.damageBonus = damageBonus;
+            shoot.atkSpeedMultiplier = atkSpeedMultiplier;
+            shoot.timeBetweenShots = newTimebetweenShots;
+        }
     }
     
 
