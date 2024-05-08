@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 1
   level: 1
   description: Deals 1 damage.
-  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  unitPrefab: {fileID: 5982517844642132543, guid: 01359e6516df0a042b246d70e5ed4b18, type: 3}
   facePrefab: {fileID: 6017567893226575047, guid: 7c9f30070db0e4d4ea1fc7f70eb40396, type: 3}

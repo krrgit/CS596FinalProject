@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 3
   level: 1
   description: Sprays 2 seeds.
-  unitPrefab: {fileID: 9076575489451304929, guid: fd7cd9a296f3f1041bc873ebd130484f, type: 3}
+  unitPrefab: {fileID: 8476710554759438581, guid: 245446bed9020ec4199b85d8d44980fa, type: 3}
   facePrefab: {fileID: 3425632168493511056, guid: bccf5cbe472b94b00a332846b6912a65, type: 3}

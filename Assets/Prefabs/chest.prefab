@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 9076575489451304943}
   - component: {fileID: 9076575489451304936}
   - component: {fileID: -3189646061442736071}
+  - component: {fileID: -7750097041216929578}
   m_Layer: 0
   m_Name: chest
   m_TagString: Player
@@ -162,4 +163,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSO: {fileID: 0}
   gridCell: {fileID: 0}
+  level: 1
+  maxLevel: 3
+  currExp: 0
+  totalExp: 0
+  expRequirements: 010000000200000003000000
   health: {fileID: 9076575489451304936}
+--- !u!114 &-7750097041216929578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076575489451304929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93b4d2521bf1004f85dda02aaed1771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gemPrefab: {fileID: 9097521349935486349, guid: b2b17c1888c84f343976c0ce89a8bd36, type: 3}
+  dropInterval: 10
+  spawnPosition: {x: 0, y: 2, z: 0}

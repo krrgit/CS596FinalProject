@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 1
   level: 1
   description: Blocks lane & deals 1 damage to enemy
-  unitPrefab: {fileID: 9076575489451304929, guid: 1e3835727ee0842518ff414c2fc6671a, type: 3}
+  unitPrefab: {fileID: 5716508210901062785, guid: d334d83729d0e0d4d8a12504249597c6, type: 3}
   facePrefab: {fileID: 2423717591788751440, guid: 521c346ce9853412594287110b37187b, type: 3}

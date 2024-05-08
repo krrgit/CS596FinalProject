@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,12 @@ public class slimeShoot : MonoBehaviour
     public float burstDelay = 2.0f;
 
     private bool canShoot = true;
+    public float atkSpeedMultiplier;
+    public int damageBonus;
+
+
+    public bool canBuff = false;
+
 
     void Update()
     {
@@ -40,8 +47,16 @@ public class slimeShoot : MonoBehaviour
 
     void Shoot()
     {
-        GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        
+        GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
+        bullet bulletScript = newBullet.GetComponent<bullet>();
+        if (canBuff)
+        {
+            bulletScript.bulletDamage += damageBonus;
+            bulletScript.bulletSpeed += atkSpeedMultiplier;
+        }
+        print("bullet damage: " + bulletScript.bulletDamage + "bullet speed: " + bulletScript.bulletSpeed);
 
         StartCoroutine(DestroyBulletWhenOutOfView(newBullet));
     }
