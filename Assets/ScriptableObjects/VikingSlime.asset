@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2311c551e98e14dbf89746ea981511df, type: 3}
+  m_Name: VikingSlime
+  m_EditorClassIdentifier: 
+  cardName: VIking Slime
+  cost: 1
+  health: 6
+  attack: 1
+  level: 1
+  description: Blocks lane & deals 1 damage to enemy
+  unitPrefab: {fileID: 5716508210901062785, guid: d334d83729d0e0d4d8a12504249597c6, type: 3}
+  facePrefab: {fileID: 2423717591788751440, guid: 521c346ce9853412594287110b37187b, type: 3}

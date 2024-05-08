@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2311c551e98e14dbf89746ea981511df, type: 3}
+  m_Name: QueenSlime
+  m_EditorClassIdentifier: 
+  cardName: Queen Slime
+  cost: 1
+  health: 4
+  attack: 0
+  level: 1
+  description: AOE buff.
+  unitPrefab: {fileID: 5408912700553067070, guid: 571650d4a9cf04e45a896dfca48a8f6a, type: 3}
+  facePrefab: {fileID: 8716612672008579672, guid: 15dd27ad322b2452bbccfa8cc8ffe083, type: 3}

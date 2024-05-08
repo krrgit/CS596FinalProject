@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2311c551e98e14dbf89746ea981511df, type: 3}
+  m_Name: SaplingSlime
+  m_EditorClassIdentifier: 
+  cardName: Sapling Slime
+  cost: 1
+  health: 1
+  attack: 2
+  level: 1
+  description: Shoots 1 seed.
+  unitPrefab: {fileID: 6030489012038631720, guid: 735282ac591410f43899368b3f5033c4, type: 3}
+  facePrefab: {fileID: 1663543663021064217, guid: 55500d7bf856049acace11e8fbfc9e1f, type: 3}
