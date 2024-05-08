@@ -4,18 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - gridCell
-  - Enemy
-  - Wall
-  - Bullet
-  - Gem
-  - UICard
-  - UIDeck
+  - Ground
+  - Tractor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Shield
   - Water
   - UI
   - 

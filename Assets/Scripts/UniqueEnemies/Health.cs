@@ -42,5 +42,4 @@ public class Health : MonoBehaviour
     {
         godMode = enabled;
     }
-    
 }
