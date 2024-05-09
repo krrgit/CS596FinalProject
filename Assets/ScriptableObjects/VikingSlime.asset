@@ -17,6 +17,6 @@ MonoBehaviour:
   health: 6
   attack: 1
   level: 1
-  description: Blocks lane & deals 1 damage to enemy
+  description: deals 1 dmg when blocking.
   unitPrefab: {fileID: 4520230244258358382, guid: d4b578c1ed78e2e47afca8e0e88008a1, type: 3}
   facePrefab: {fileID: 2423717591788751440, guid: 521c346ce9853412594287110b37187b, type: 3}

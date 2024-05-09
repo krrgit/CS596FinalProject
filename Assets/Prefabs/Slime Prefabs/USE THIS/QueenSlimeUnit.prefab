@@ -231,6 +231,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
+  healthUps: 010000000100000001000000
   health: {fileID: 3558041622794460109}
 --- !u!114 &8719408349704623117
 MonoBehaviour:
@@ -248,8 +249,8 @@ MonoBehaviour:
   inFrontCell: {x: 0, y: 0, z: 0}
   inBackCell: {x: 0, y: 0, z: 0}
   gridManager: {fileID: 0}
-  damageBonus: 20
-  atkSpeedMultiplier: 3
+  damageBonus: 1
+  atkSpeedMultiplier: 1.5
   newTimebetweenShots: 0.1
 --- !u!114 &3558041622794460109
 MonoBehaviour:
@@ -264,9 +265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  startHealth: 100
-  DPS: 10
+  startHealth: 1
+  DPS: 1
   godMode: 0
+  hitEffect: {fileID: 4725793038341649213, guid: d59818cacbb484e94bd1f0f8be868022, type: 3}
 --- !u!1001 &1086234345128652923
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2505,6 +2505,7 @@ MonoBehaviour:
   startHealth: 10
   DPS: 1
   godMode: 0
+  hitEffect: {fileID: 0}
 --- !u!1 &984889713
 GameObject:
   m_ObjectHideFlags: 0

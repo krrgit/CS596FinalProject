@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: -3189646061442736071}
   - component: {fileID: -7750097041216929578}
   m_Layer: 0
-  m_Name: chest
+  m_Name: Chest
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   startHealth: 3
   DPS: 10
   godMode: 0
+  hitEffect: {fileID: 4725793038341649213, guid: d59818cacbb484e94bd1f0f8be868022, type: 3}
 --- !u!114 &-3189646061442736071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +118,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
+  healthUps: 010000000100000001000000
   health: {fileID: 9076575489451304936}
 --- !u!114 &-7750097041216929578
 MonoBehaviour:
@@ -130,7 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e93b4d2521bf1004f85dda02aaed1771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardUnit: {fileID: -3189646061442736071}
   gemPrefab: {fileID: 9097521349935486349, guid: b2b17c1888c84f343976c0ce89a8bd36, type: 3}
+  dropDown: 2
   dropInterval: 10
   spawnPosition: {x: 0, y: 0.5, z: 0}
   spawnForce: 25

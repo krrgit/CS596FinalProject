@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     public float startHealth = 100;
     public float DPS = 10; // Change it whenever for enemy/slime attack
     public bool godMode = false; // toggle
-
+    [SerializeField] private GameObject hitEffect;
     public delegate void OnDeathDelegate();
     public OnDeathDelegate OnDeathEvent;
     public delegate void OnTakeDamageDelegate(float currentHealth);
@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
         if (!godMode) // Check if god mode is not enabled
         {
             health -= DPS;
+            HitEffect();
             
             OnDamageEvent?.Invoke(health);
             if (health <= 0)
@@ -43,5 +44,12 @@ public class Health : MonoBehaviour
     public void ToggleGodMode(bool enabled)
     {
         godMode = enabled;
+    }
+    
+    void HitEffect()
+    {
+        if (!hitEffect) return;
+
+        Instantiate(hitEffect, transform.position + Vector3.up, Quaternion.identity);
     }
 }

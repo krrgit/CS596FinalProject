@@ -14,6 +14,7 @@ public class slimeShoot : MonoBehaviour
     private bool canShoot = true;
     public float atkSpeedMultiplier;
     public int damageBonus;
+    public int baseDamage;
 
     public bool canBuff = false;
     private bool isLvl2 = false;
@@ -24,6 +25,7 @@ public class slimeShoot : MonoBehaviour
     {
         cardUnit = GetComponent<CardUnit>();
         cardUnit.LevelUpEvent += OnCardUnitLevelUp;
+        baseDamage = cardUnit.cardSO.attack;
     }
     void Update()
     {
@@ -59,6 +61,7 @@ public class slimeShoot : MonoBehaviour
         newBullet.transform.SetParent(transform);
 
         bullet bulletScript = newBullet.GetComponent<bullet>();
+        bulletScript.bulletDamage = baseDamage;
 
         if (canBuff)
         {
@@ -84,7 +87,7 @@ public class slimeShoot : MonoBehaviour
                 yield break;
             }
 
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
     }
     

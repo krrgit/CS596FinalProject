@@ -176,7 +176,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   moveSpeed: 0.5
   attackCooldown: 1
-  enemyDamage: 10
+  enemyDamage: 1
   currentState: 0
   previousState: 0
   isPoisoned: 0
@@ -192,8 +192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f2369ee2836484489033f882198131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
-  startHealth: 100
+  currentHealth: 3
+  startHealth: 3
+  hitEffect: {fileID: 4725793038341649213, guid: 8d5c7a5243f9c4d328db4af9f860730b, type: 3}
 --- !u!114 &5743954442954940759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +211,7 @@ MonoBehaviour:
   collider: {fileID: 7131994303866414638}
   enemyAI: {fileID: 1358644685893621713}
   usedPhase: 0
+  phaseTime: 1.3
   meshRenderer: {fileID: 8043248607616768377}
 --- !u!1 &2431670390610599876
 GameObject:

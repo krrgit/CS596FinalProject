@@ -231,6 +231,7 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
+  healthUps: 010000000100000001000000
   health: {fileID: 1968768534004585514}
 --- !u!114 &3334340027426039357
 MonoBehaviour:
@@ -266,9 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  startHealth: 100
-  DPS: 10
+  startHealth: 1
+  DPS: 1
   godMode: 0
+  hitEffect: {fileID: 4725793038341649213, guid: d59818cacbb484e94bd1f0f8be868022, type: 3}
 --- !u!1001 &5873587008509724804
 PrefabInstance:
   m_ObjectHideFlags: 0
