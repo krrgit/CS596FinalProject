@@ -56,7 +56,9 @@ public class RabbitSlimeShoot : MonoBehaviour
         
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
-        
+
+        SoundManager.Instance.PlayClip("shoot"); // play sound fx when slimes shoot
+
         BulletSlow bulletScript = newBullet.GetComponent<BulletSlow>();
         bulletScript.slowDuration += longerSlow;
         print("slow duration: " + bulletScript.slowDuration);
