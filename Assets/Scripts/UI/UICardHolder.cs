@@ -93,6 +93,8 @@ public class UICardHolder : MonoBehaviour
         if (hit.CompareTag("UICard"))
         {
             print("Pickup Card");
+            SoundManager.Instance.PlayClip("grabcard"); // play sound fx for grabbing a card
+
             cardHeld = true;
             uiCard = hit.gameObject.GetComponent<UICard>();
             uiCard.HoldCard();

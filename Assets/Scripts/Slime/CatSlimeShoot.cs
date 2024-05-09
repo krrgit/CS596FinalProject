@@ -58,6 +58,8 @@ public class CatSlimeShoot : MonoBehaviour
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
 
+        SoundManager.Instance.PlayClip("shoot"); // play sound fx when slimes shoot
+
         BulletPierce bulletScript = newBullet.GetComponent<BulletPierce>();
         bulletScript.maxPierceCount += additionalPierceCount;
         if (canBuff)

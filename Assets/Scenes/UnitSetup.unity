@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.181595, g: 0.22724365, b: 0.30741107, a: 1}
+  m_IndirectSpecularColor: {r: 0.1815954, g: 0.22724426, b: 0.30741215, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chest
       objectReference: {fileID: 0}
+    - target: {fileID: 9076575489451304929, guid: 84d21ba255ce442438b8683c89c9bc0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9076575489451304938, guid: 84d21ba255ce442438b8683c89c9bc0f, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -458,8 +462,69 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigCatSlimeUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 1693007204749975889, guid: a8ec2a029298c2740be6cce0d435efca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec2a029298c2740be6cce0d435efca, type: 3}
+--- !u!1001 &2056257554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 704340310107545808, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_Name
+      value: test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.7988944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446335722007915204, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80d6773ae18da41458e4ea497b636811, type: 3}
 --- !u!1 &2113845090
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VikingSlimeUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 4520230244258358382, guid: d4b578c1ed78e2e47afca8e0e88008a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b578c1ed78e2e47afca8e0e88008a1, type: 3}
 --- !u!23 &1988306722564091957
@@ -795,6 +864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlantSlimeUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 7586965061648269145, guid: 7238300a4eb375f49b55c33b95e3f0f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7238300a4eb375f49b55c33b95e3f0f7, type: 3}
 --- !u!1 &2414119004249004243
@@ -856,6 +929,10 @@ PrefabInstance:
     - target: {fileID: 2137398648267790835, guid: b8a832a844c2c824987f20151f9beeaf, type: 3}
       propertyPath: m_Name
       value: SaplingSlimeUnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137398648267790835, guid: b8a832a844c2c824987f20151f9beeaf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3222038098223348292, guid: b8a832a844c2c824987f20151f9beeaf, type: 3}
       propertyPath: m_RootOrder
@@ -957,6 +1034,10 @@ PrefabInstance:
     - target: {fileID: 6013140982197722599, guid: da5279631164680449e7d171b09fcd38, type: 3}
       propertyPath: m_Name
       value: CatSlimeUnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013140982197722599, guid: da5279631164680449e7d171b09fcd38, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da5279631164680449e7d171b09fcd38, type: 3}
@@ -1098,6 +1179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetalHeadUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 4282565028619711213, guid: be6ca1b023c45704eaf6e6efe1f283c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be6ca1b023c45704eaf6e6efe1f283c7, type: 3}
 --- !u!1001 &5579363342809558164
@@ -1155,6 +1240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BunnySlimeUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 6010870894702126694, guid: 3b6a0a6c3e570dd4e8e54d73193215af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b6a0a6c3e570dd4e8e54d73193215af, type: 3}
 --- !u!1001 &5607705862054689673
@@ -1167,6 +1256,10 @@ PrefabInstance:
     - target: {fileID: 6271851871374733105, guid: dcefc35181beea6429f23dc15d6e363e, type: 3}
       propertyPath: m_Name
       value: RegularSlimeUnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271851871374733105, guid: dcefc35181beea6429f23dc15d6e363e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6907629113084491989, guid: dcefc35181beea6429f23dc15d6e363e, type: 3}
       propertyPath: m_RootOrder
@@ -1376,7 +1469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6464727723197516520
 Transform:
   m_ObjectHideFlags: 0
@@ -1480,6 +1573,10 @@ PrefabInstance:
     - target: {fileID: 8328191008387286060, guid: 8fd9c46143a3c024d9e894c2b63f9a8d, type: 3}
       propertyPath: m_Name
       value: QueenSlimeUnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8328191008387286060, guid: 8fd9c46143a3c024d9e894c2b63f9a8d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd9c46143a3c024d9e894c2b63f9a8d, type: 3}
