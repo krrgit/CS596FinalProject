@@ -232,11 +232,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3744159503582342669}
   moveDirection: {x: 0, y: 0, z: 1}
-  moveSpeed: 0.5
+  moveSpeed: 0.2
   attackCooldown: 1
   enemyDamage: 10
   currentState: 0
   previousState: 0
+  isPoisoned: 0
 --- !u!114 &3744159503582342666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,11 +250,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65049c76e3c24c5499efb266bad92f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 0
-  speed: 2
-  yground: 2
-  Balloon: {fileID: 3744159504327795763}
-  Strings: {fileID: 3744159502939736861}
+  playerTag: Player
+  wallTag: Wall
+  speed: 0.2
 --- !u!114 &2305942549218098331
 MonoBehaviour:
   m_ObjectHideFlags: 0

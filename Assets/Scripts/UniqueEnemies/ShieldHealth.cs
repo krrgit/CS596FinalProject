@@ -8,12 +8,6 @@ public class ShieldHealth : MonoBehaviour
 
     [SerializeField]
     private GameObject Shield;
-    private Renderer shieldRenderer;
-    private Collider shieldCollider;
-    private Collider groundCollider; 
-    private Color color;
-    public Material damagedShield; // for DamagedShield
-    public Material destroyedShield; // for DestroyedShield
 
     void Start()
     {
@@ -23,12 +17,6 @@ public class ShieldHealth : MonoBehaviour
         {
             Debug.LogError("You broke something good job");
         }
-
-        shieldRenderer = Shield.GetComponent<Renderer>();
-        shieldCollider = Shield.GetComponent<Collider>();
-        color = shieldRenderer.material.color;
-
-        groundCollider = GameObject.FindWithTag("gridCell").GetComponent<Collider>();
     }
 
     void Update()
@@ -37,32 +25,14 @@ public class ShieldHealth : MonoBehaviour
         {
             // Accessing the currentHealth value
             float health = enemyHealth.currentHealth;
-            if (health <= 100)
-            {
-                shieldRenderer.material = damagedShield;
-            }
+            float halfhealth = enemyHealth.startHealth;
 
-            if (health <= 50)
+            if (health <= halfhealth/2)
             {
-                Dying();
+                Invoke("Death", 3f); // Dies after 2 seconds
+                Destroy(Shield);
             }
         }
-    }
-
-    // Dying "Animation"
-    private void Dying()
-    {
-        shieldRenderer.material = destroyedShield;
-        // Disable collision with the zombie but keep it with the ground/grass
-        Physics.IgnoreCollision(shieldCollider, groundCollider, false);
-        Invoke("Death", 3f); // Dies after 2 seconds
-    }
-
-
-    // Death
-    private void Death()
-    {
-        Destroy(gameObject);
     }
 }
 
