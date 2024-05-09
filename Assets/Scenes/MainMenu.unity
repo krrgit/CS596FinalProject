@@ -3083,7 +3083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1465492240222329425, guid: 9c499465163864a529a84cda2db36e89, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1465492240222329425, guid: 9c499465163864a529a84cda2db36e89, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3115,11 +3115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1465492240222329426, guid: 9c499465163864a529a84cda2db36e89, type: 3}
       propertyPath: width
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1465492240222329426, guid: 9c499465163864a529a84cda2db36e89, type: 3}
       propertyPath: length
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1465492240222329426, guid: 9c499465163864a529a84cda2db36e89, type: 3}
       propertyPath: windSpeed
