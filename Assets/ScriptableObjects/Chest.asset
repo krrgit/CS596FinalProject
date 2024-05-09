@@ -19,4 +19,4 @@ MonoBehaviour:
   level: 1
   description: Spawns gems occasionally.
   unitPrefab: {fileID: 9076575489451304929, guid: 84d21ba255ce442438b8683c89c9bc0f, type: 3}
-  facePrefab: {fileID: 0}
+  facePrefab: {fileID: 4431437981043696530, guid: b2b3671e934ca4d91831322240ed7d42, type: 3}

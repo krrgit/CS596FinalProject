@@ -115,8 +115,9 @@ Shader "Unlit/ModelGrass" {
                 float ndotl = DotClamped(lightDir, normalize(float3(0, 1, 0)));
                 float4 ao = lerp(_AOColor, 1.0f, i.uv.y);
                 float4 tip = lerp(0.0f, _TipColor, i.uv.y * i.uv.y * i.uv.y);
+                
 
-                return ((col + tip) * UNITY_LIGHTMODEL_AMBIENT * ndotl * ao) + ((col + tip) * UNITY_LIGHTMODEL_AMBIENT * (1.0 - ndotl) * ao);
+                return(((col + tip) * UNITY_LIGHTMODEL_AMBIENT * ndotl * ao) + ((col + tip) * UNITY_LIGHTMODEL_AMBIENT * (1.0 - ndotl) * ao * 0.95f));
             }
 
             ENDCG
