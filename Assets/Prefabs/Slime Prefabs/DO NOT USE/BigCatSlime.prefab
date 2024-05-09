@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 4019908501095957418}
   - component: {fileID: 5025982785565045550}
   - component: {fileID: 1359278451099900765}
+  - component: {fileID: -3431062293181392168}
   m_Layer: 0
   m_Name: BigCatSlime
   m_TagString: Player
@@ -303,6 +304,20 @@ MonoBehaviour:
   startHealth: 100
   DPS: 10
   godMode: 0
+--- !u!114 &-3431062293181392168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204158358099583986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ad9ca39a3669842910f2e8edfbb9c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvl2aura: {fileID: 0}
+  lvl3aura: {fileID: 0}
 --- !u!1 &7802746786281647321
 GameObject:
   m_ObjectHideFlags: 0

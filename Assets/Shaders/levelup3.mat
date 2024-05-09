@@ -42,6 +42,6 @@ Material:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     m_Colors:
-    - _Color: {r: 4, g: 0, b: 0, a: 1}
+    - _Color: {r: 5.2164755, g: 0, b: 0, a: 1}
     - _Scroll_Velocity: {r: 0, g: -0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
