@@ -8,6 +8,7 @@ public class ModelGrass : MonoBehaviour {
     public int density = 1;
     public Material grassMaterial;
     public Mesh grassMesh;
+    public bool isInstanced = true;
 
     public bool updateGrass;
 
@@ -36,7 +37,14 @@ public class ModelGrass : MonoBehaviour {
         grassDataBuffer = new ComputeBuffer(width * length * density * density, 4 * 6);
         argsBuffer = new ComputeBuffer(1, 5 * sizeof(uint), ComputeBufferType.IndirectArguments);
 
-        matInstance = new Material(grassMaterial);
+        if (isInstanced)
+        {
+            matInstance = new Material(grassMaterial);
+        }
+        else
+        {
+            matInstance = grassMaterial;
+        }
         
         wind = new RenderTexture(256, 256, 0, RenderTextureFormat.ARGBFloat, RenderTextureReadWrite.Linear);
         wind.enableRandomWrite = true;
