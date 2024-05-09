@@ -57,5 +57,6 @@ public class ChestUnit : MonoBehaviour
         // instantiate gem
         var go = Instantiate(gemPrefab, spawn_position, Quaternion.identity);
         go.GetComponent<Rigidbody>().AddForce(spawnForce * spawnDirection.normalized, ForceMode.Impulse);
+        
     }
 }
