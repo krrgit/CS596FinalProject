@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class VikingSlime : MonoBehaviour
 {
-
-
-    public float VikingHealth = 50f;
+    
+    public float healthAddOnLevelUp = 50f;
+    public int damageUp = 1;
     private Health currvikingHealth;
     public int damage = 5;
     
@@ -18,6 +18,7 @@ public class VikingSlime : MonoBehaviour
         CardUnit cardUnit = GetComponent<CardUnit>();
         cardUnit.LevelUpEvent += OnCardUnitLevelUp;
         currvikingHealth = GetComponent<Health>();
+        damage = cardUnit.cardSO.attack;
     }
     
     
@@ -26,11 +27,12 @@ public class VikingSlime : MonoBehaviour
 
         if (newLevel == 2)
         {
-            currvikingHealth.health += VikingHealth;
+            //currvikingHealth.health += healthAddOnLevelUp;
         }
         else if (newLevel == 3)
         {
-            currvikingHealth.health += VikingHealth;
+            //currvikingHealth.health += healthAddOnLevelUp;
+            damage += damageUp;
         }
     }
 
@@ -40,6 +42,14 @@ public class VikingSlime : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") && Time.time - lastAttackCooldown >= attackCooldown)
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
+            DealDamageCheck(enemyHealth);
+        }
+    }
+
+    public void DealDamageCheck(EnemyHealth enemyHealth)
+    {
+        if (Time.time - lastAttackCooldown >= attackCooldown)
+        {
             enemyHealth.TakeDamage(damage);
             lastAttackCooldown = Time.time;
         }

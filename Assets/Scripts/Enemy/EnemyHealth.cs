@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public float currentHealth;
     public float startHealth = 100;
+    [SerializeField] private GameObject hitEffect;
 
     private void Start()
     {
@@ -14,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        HitEffect();
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
@@ -25,5 +27,12 @@ public class EnemyHealth : MonoBehaviour
     private void Death()
     {
         Destroy(gameObject);
+    }
+
+    void HitEffect()
+    {
+        if (!hitEffect) return;
+
+        Instantiate(hitEffect, transform.position + Vector3.up, Quaternion.identity);
     }
 }

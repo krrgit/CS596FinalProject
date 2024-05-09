@@ -17,6 +17,6 @@ MonoBehaviour:
   health: 4
   attack: 0
   level: 1
-  description: AOE buff.
+  description: +1 atk +1 health to unit infront.
   unitPrefab: {fileID: 8328191008387286060, guid: 8fd9c46143a3c024d9e894c2b63f9a8d, type: 3}
   facePrefab: {fileID: 8716612672008579672, guid: 15dd27ad322b2452bbccfa8cc8ffe083, type: 3}

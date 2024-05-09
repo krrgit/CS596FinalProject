@@ -62,8 +62,8 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 727ccacb00527f54cae841808b28b4ca, type: 2}
-  - {fileID: 2100000, guid: 9ceaa6473a7e0c14ba7a4b9bab4e10d6, type: 2}
-  - {fileID: 2100000, guid: 1da919cf6dae39041879b82489d3197b, type: 2}
+  - {fileID: 2100000, guid: 727ccacb00527f54cae841808b28b4ca, type: 2}
+  - {fileID: 2100000, guid: 2d6aeb90ee52f4470aff4a462f7c87f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,9 +146,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9ceaa6473a7e0c14ba7a4b9bab4e10d6, type: 2}
   - {fileID: 2100000, guid: 727ccacb00527f54cae841808b28b4ca, type: 2}
-  - {fileID: 2100000, guid: 1da919cf6dae39041879b82489d3197b, type: 2}
+  - {fileID: 2100000, guid: 727ccacb00527f54cae841808b28b4ca, type: 2}
+  - {fileID: 2100000, guid: 2d6aeb90ee52f4470aff4a462f7c87f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -238,7 +238,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0.012957037, y: 0, z: -0.5214369}
 --- !u!95 &3853066333126632485
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -255,4 +255,5 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

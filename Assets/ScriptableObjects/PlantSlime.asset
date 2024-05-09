@@ -17,6 +17,6 @@ MonoBehaviour:
   health: 3
   attack: 3
   level: 1
-  description: Sprays 2 seeds.
+  description: shoots 2 peas.
   unitPrefab: {fileID: 7586965061648269145, guid: 7238300a4eb375f49b55c33b95e3f0f7, type: 3}
   facePrefab: {fileID: 3425632168493511056, guid: bccf5cbe472b94b00a332846b6912a65, type: 3}

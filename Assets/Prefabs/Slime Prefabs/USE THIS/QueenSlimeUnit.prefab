@@ -33,6 +33,89 @@ Transform:
   m_Father: {fileID: 7143121057852029430}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
+--- !u!1 &295640875633110356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7239275973263608417}
+  - component: {fileID: 2861874465722202822}
+  - component: {fileID: 3824465334295513332}
+  m_Layer: 0
+  m_Name: lvl2Aura (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7239275973263608417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295640875633110356}
+  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 0.3784358, z: 0}
+  m_LocalScale: {x: 50.94901, y: 50.949, z: 50.949}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7143121057852029430}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &2861874465722202822
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295640875633110356}
+  m_Mesh: {fileID: 2534964839176971238, guid: 497435fa93dff1e44a5553d8a5c0701b, type: 3}
+--- !u!23 &3824465334295513332
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295640875633110356}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0e66658edd7829043a0fd7bedc7779af, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7481035125030655209
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +147,89 @@ Transform:
   m_Father: {fileID: 3772784184694524713}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7532990104385053373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6632262891986802880}
+  - component: {fileID: 4116880310980831175}
+  - component: {fileID: 3383032213105220121}
+  m_Layer: 0
+  m_Name: lvl3Aura (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6632262891986802880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532990104385053373}
+  m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 0, y: 0.3784358, z: 0}
+  m_LocalScale: {x: 50.94901, y: 50.949005, z: 50.949005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7143121057852029430}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4116880310980831175
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532990104385053373}
+  m_Mesh: {fileID: 2534964839176971238, guid: 497435fa93dff1e44a5553d8a5c0701b, type: 3}
+--- !u!23 &3383032213105220121
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7532990104385053373}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3cb135ece1ecd2b44947540ba2445a3d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8166340538863150632
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +341,7 @@ GameObject:
   - component: {fileID: 4315808359076206662}
   - component: {fileID: 8719408349704623117}
   - component: {fileID: 3558041622794460109}
+  - component: {fileID: 9060882045723470104}
   m_Layer: 0
   m_Name: QueenSlimeUnit
   m_TagString: Player
@@ -195,6 +362,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1036412032010031190}
+  - {fileID: 6632262891986802880}
+  - {fileID: 7239275973263608417}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -230,7 +399,8 @@ MonoBehaviour:
   maxLevel: 3
   currExp: 0
   totalExp: 0
-  expRequirements: 010000000200000003000000
+  expRequirements: 01000000020000000300000003000000
+  healthUps: 01000000010000000100000001000000
   health: {fileID: 3558041622794460109}
 --- !u!114 &8719408349704623117
 MonoBehaviour:
@@ -263,10 +433,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
+  health: 1
+  startHealth: 1
+  DPS: 1
   godMode: 0
+  hitEffect: {fileID: 4725793038341649213, guid: d59818cacbb484e94bd1f0f8be868022, type: 3}
+--- !u!114 &9060882045723470104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8328191008387286060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ad9ca39a3669842910f2e8edfbb9c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardUnit: {fileID: 4315808359076206662}
+  lvl2aura: {fileID: 295640875633110356}
+  lvl3aura: {fileID: 7532990104385053373}
 --- !u!1001 &1086234345128652923
 PrefabInstance:
   m_ObjectHideFlags: 0

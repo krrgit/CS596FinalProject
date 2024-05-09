@@ -112,5 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootDirection: {x: 0, y: 0, z: -1}
   bulletSpeed: 1
-  bulletDamage: 10
+  bulletDamage: 1
   maxPierceCount: 1

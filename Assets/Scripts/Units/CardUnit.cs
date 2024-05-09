@@ -13,6 +13,7 @@ public class CardUnit : MonoBehaviour
     [SerializeField] private int currExp = 0;
     [SerializeField] int totalExp = 0;
     [SerializeField] int[] expRequirements = {1, 2, 3};
+    [SerializeField] private int[] healthUps = { 1,1,1,1}; // Health increases on level up
     [SerializeField] private Health health;
 
     public delegate void LevelUpDelegate(int level);
@@ -26,6 +27,14 @@ public class CardUnit : MonoBehaviour
     private void OnDisable()
     {
         health.OnDeathEvent -= SendBackToDeck;
+    }
+
+    public void Setup(CardSO cardSO, gridCell gridCell)
+    {
+        this.cardSO = cardSO;
+        this.gridCell = gridCell;
+        health.startHealth = cardSO.health;
+        health.health = cardSO.health;
     }
 
     public void SendBackToDeck()
@@ -54,6 +63,11 @@ public class CardUnit : MonoBehaviour
             level++;
             currExp = 0;
             print(cardSO.cardName + " is level " + level + "!");
+            
+            // Heal Slime
+            health.startHealth += healthUps[level];
+            health.health = health.startHealth;
+            
             LevelUpEvent?.Invoke(level);
         }
 

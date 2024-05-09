@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ChestUnit : MonoBehaviour
 {
+    [SerializeField] private CardUnit cardUnit;
     public GameObject gemPrefab;
-    
+    public float dropDown = 2;
     public float dropInterval = 10f;
     private float nextDropTime;
 
@@ -14,11 +17,24 @@ public class ChestUnit : MonoBehaviour
 
     public float randomRadius = 1;
 
-
-     void Start()
+    private void OnEnable()
     {
+        cardUnit.LevelUpEvent += LevelUp;
+    }
+    
+    private void OnDisable()
+    {
+        cardUnit.LevelUpEvent -= LevelUp;
+    }
 
-        // commented out for testing so the sphere's drop from the start
+    void LevelUp(int level)
+    {
+        dropInterval -= dropDown; // Lower the drop time
+        nextDropTime -= dropDown; // Lower the current interval
+    }
+
+    void Start()
+    {
         // drop the first sphere after dropInterval time
         nextDropTime = Time.time + dropInterval;
     }

@@ -28,6 +28,7 @@ public class BulletPierce : MonoBehaviour
             enemyHealth.TakeDamage(bulletDamage);
 
             currentPierceCount++;
+            print("Pierce by " + gameObject.name);
 
             if (currentPierceCount >= maxPierceCount)
             {

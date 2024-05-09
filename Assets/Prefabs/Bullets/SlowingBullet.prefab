@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootDirection: {x: 0, y: 0.8, z: -1}
   bulletSpeed: 10
-  bulletDamage: 10
+  bulletDamage: 1
   slowDuration: 3
   slowFactor: 0.5
   bulletForce: 0.5

@@ -113,4 +113,4 @@ MonoBehaviour:
   bulletPrefab: {fileID: 704340310107545808}
   shootDirection: {x: 0, y: 0, z: -1}
   bulletSpeed: 1
-  bulletDamage: 50
+  bulletDamage: 1

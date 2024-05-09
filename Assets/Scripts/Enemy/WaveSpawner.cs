@@ -7,9 +7,9 @@ using Random = UnityEngine.Random;
 
 public enum EnemyClass
 {
-    Enemy01,
-    Enemy02,
-    Enemy03,
+    Bat,
+    Ghost,
+    Slime,
     Enemy04
 };
 

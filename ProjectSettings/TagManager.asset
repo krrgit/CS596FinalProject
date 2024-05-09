@@ -13,6 +13,7 @@ TagManager:
   - Gem
   - gridCell
   - Bullet
+  - Undefined
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - Shield
   - Water
   - UI
-  - 
-  - 
+  - Monster
+  - Slimes
   - 
   - 
   - 
