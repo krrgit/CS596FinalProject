@@ -4,83 +4,37 @@ using UnityEngine;
 
 public class BalloonZombie : MonoBehaviour
 {
-    public bool test = false;
-    public float speed = 2f; // Speed
-    public float yground = 1.10f;
-    private Rigidbody rb;
+    public string playerTag = "Player";
+    public string wallTag = "Wall";
+    public float speed = 1.0f; // MUST BE THE SAME WITH ENEMYAI MOVESPEED
 
-    private GameObject player; // Reference to the player object
-
-    public GameObject Balloon;
-    public GameObject Strings;
-
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player"); // Find the player object
-        rb = GetComponent<Rigidbody>();
-    }
+    private Transform target;
 
     void Update()
     {
-        if (test)
-        {
-            FlyTowardsPlayer(); // testing
-        }
+        FindTarget();
 
-        if (transform.position.y <= yground)
+        if (target != null)
         {
-            KeepWalking();
+            // Move towards the target
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
 
-    void FlyTowardsPlayer()
+    void FindTarget()
     {
+        GameObject player = GameObject.FindGameObjectWithTag(playerTag);
         if (player != null)
         {
-            // Get the player's position
-            Vector3 playerPosition = player.transform.position;
-
-            // Calculate the distance between the player and the flying zombie
-            float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
-
-            // If Enemy is close enough, drop down
-            if (distanceToPlayer < 8f)
-            {
-                Destroy(Balloon);
-                Destroy(Strings);
-                rb.useGravity = true;
-                test = false;
-                return;
-            }
-
-            // Ignore the Y-component of the player's position
-            playerPosition.y = transform.position.y;
-
-            // Calculate the direction from the current position to the modified player position
-            Vector3 direction = playerPosition - transform.position;
-            direction.Normalize(); // Normalize to get a unit vector
-
-            // Move towards the modified player position
-            transform.Translate(direction * speed * Time.deltaTime);
+            target = player.transform;
         }
-    }
-
-    void KeepWalking()
-    {
-        // Get the player's position
-        Vector3 playerPosition = player.transform.position;
-
-        // Calculate the distance between the player and the flying zombie
-        float distanceToPlayer = Vector3.Distance(transform.position, playerPosition);
-
-        // Ignore the Y-component of the player's position
-        playerPosition.y = transform.position.y;
-
-        // Calculate the direction from the current position to the modified player position
-        Vector3 direction = playerPosition - transform.position;
-        direction.Normalize(); // Normalize to get a unit vector
-
-        // Move towards the modified player position
-        transform.Translate(direction * speed * Time.deltaTime);
+        else
+        {
+            GameObject wall = GameObject.FindGameObjectWithTag(wallTag);
+            if (wall != null)
+            {
+                target = wall.transform;
+            }
+        }
     }
 }

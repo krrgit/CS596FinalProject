@@ -18,6 +18,7 @@ public class UIProgress : MonoBehaviour
     [Header("Screens")]
     [SerializeField] private GameObject finishedLevelUI;
     [SerializeField] private GameObject lostLevelUI;
+    [SerializeField] private GameObject pauseUI;
 
     private Vector3 arrowRotation;
     private int currentDay;
@@ -44,6 +45,7 @@ public class UIProgress : MonoBehaviour
     {
         finishedLevelUI.SetActive(false);
         lostLevelUI.SetActive(false);
+        pauseUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -52,6 +54,16 @@ public class UIProgress : MonoBehaviour
         UpdateDayArrow();
         UpdateLevelProgress();
 
+        PauseCheck();
+    }
+
+    void PauseCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            waveSpawner.ForcePause(!pauseUI.activeSelf);
+            pauseUI.SetActive(!pauseUI.activeSelf);
+        }
     }
 
     void UpdateUI(int _currentDay, int _totalDays)

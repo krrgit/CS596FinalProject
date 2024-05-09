@@ -107,6 +107,19 @@ public class WaveSpawner : MonoBehaviour
         IncrementTime();
 
         FinishLevelCheck();
+
+        InputCheck();
+    }
+
+    void InputCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Pause();
+        } else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FastFoward();
+        }
     }
     
 
@@ -261,6 +274,12 @@ public class WaveSpawner : MonoBehaviour
     {
         timeState = timeState != TimeState.Paused ? TimeState.Paused : TimeState.Normal;
         Time.timeScale = timeState == TimeState.Paused ? 0.001f : 1;
+    }
+
+    public void ForcePause(bool state)
+    {
+        Time.timeScale = state ? 0.001f : 1;
+        timeState = state ? TimeState.Paused : TimeState.Normal;
     }
 
     public void FastFoward()
