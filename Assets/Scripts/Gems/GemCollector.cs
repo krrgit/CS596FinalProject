@@ -41,6 +41,8 @@ public class GemCollector : MonoBehaviour
         
         GemCollectedEvent?.Invoke(gem_count);
         
+        SoundManager.Instance.PlayClip("collectgem"); // play sound fx when collecting gems
+
         // destroy the collected gem
         Destroy(gem);
     }

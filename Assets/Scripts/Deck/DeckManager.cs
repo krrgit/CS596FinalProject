@@ -67,7 +67,7 @@ public class DeckManager : MonoBehaviour
         if (UIDeckManager.Instance.SpawnCard(card))
         {
             sceneDeck.RemoveAt(0);
-            SoundManager.Instance.PlayClip("placecard");
+            SoundManager.Instance.PlayClip("dealcards"); // play sound fx when dealing cards
             print("Draw " + card.ToString());
             return true;
         }

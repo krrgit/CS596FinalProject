@@ -58,6 +58,9 @@ public class slimeShoot : MonoBehaviour
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         newBullet.transform.SetParent(transform);
 
+        SoundManager.Instance.PlayClip("shoot"); // play sound fx when slimes shoot
+
+
         bullet bulletScript = newBullet.GetComponent<bullet>();
 
         if (canBuff)
