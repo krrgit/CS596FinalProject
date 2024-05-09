@@ -54,7 +54,7 @@ public class BulletSlow : MonoBehaviour
         {
             // Reflect the bullet's velocity upon collision with ground/wall
             rb.velocity = Vector3.Reflect(rb.velocity, hit.normal);
-            SoundManager.Instance.PlayClip("collectgem"); // play sound fx when bullet bounces
+            SoundManager.Instance.PlayClip("bounce"); // play sound fx when bullet bounces
 
         }
     }

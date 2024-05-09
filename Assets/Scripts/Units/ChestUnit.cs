@@ -57,6 +57,8 @@ public class ChestUnit : MonoBehaviour
         // instantiate gem
         var go = Instantiate(gemPrefab, spawn_position, Quaternion.identity);
         go.GetComponent<Rigidbody>().AddForce(spawnForce * spawnDirection.normalized, ForceMode.Impulse);
-        
+
+        SoundManager.Instance.PlayClip("chestgem"); // play sound fx when gem spawns out of chest
+
     }
 }
