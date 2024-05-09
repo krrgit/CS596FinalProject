@@ -10,6 +10,7 @@ Shader "Unlit/ModelGrass" {
         _Stiffness("Stiffness", Range(0.0,1.0)) = 0.8
         _CullingBias ("Cull Bias", Range(0.1, 1.0)) = 0.5
     }
+    
 
     SubShader {
         Cull Off

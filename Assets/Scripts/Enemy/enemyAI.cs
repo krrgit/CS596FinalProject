@@ -43,7 +43,6 @@ public class enemyAI : MonoBehaviour
     };
 
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -53,7 +52,12 @@ public class enemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Renderer>().material.color = stateColors[(int)currentState];
+        var r =GetComponent<Renderer>();
+        if (r)
+        {
+            r.material.color = stateColors[(int)currentState];
+        }
+        
         switch (currentState)
         {
             case EnemyState.Idle:
@@ -134,6 +138,26 @@ public class enemyAI : MonoBehaviour
 
         yield return new WaitForSeconds(duration);
         moveSpeed = origMoveSpeed;
+    }
+
+    public void AttackUnit(Health unitHealth)
+    {
+        if (Time.time - lastAttackCooldown >= attackCooldown)
+        {
+            currentState = EnemyState.Attack;
+            unitHealth.TakeDamage(enemyDamage);
+            lastAttackCooldown = Time.time;
+        }
+    }
+    public void StopAttack()
+    {
+        currentState = EnemyState.Moving;
+    }
+
+    public void TakeDamage()
+    {
+        previousState = currentState;
+        currentState = EnemyState.Damaged;
     }
     
 }
