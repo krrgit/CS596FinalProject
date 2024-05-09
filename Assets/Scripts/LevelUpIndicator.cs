@@ -8,14 +8,17 @@ using UnityEngine;
 
 public class LevelUpIndicator : MonoBehaviour
 {
-    private CardUnit cardUnit;
+    [SerializeField] CardUnit cardUnit;
     public GameObject lvl2aura;
     public GameObject lvl3aura;
-    void Start()
+    void OnEnable()
     {
-        
-        cardUnit = GetComponent<CardUnit>();
         cardUnit.LevelUpEvent += OnCardUnitLevelUp;
+    }
+    
+    void OnDisable()
+    {
+        cardUnit.LevelUpEvent -= OnCardUnitLevelUp;
     }
     
     private void OnCardUnitLevelUp(int newLevel)

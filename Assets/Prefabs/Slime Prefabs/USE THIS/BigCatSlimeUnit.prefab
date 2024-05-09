@@ -55,8 +55,8 @@ MonoBehaviour:
   maxLevel: 3
   currExp: 0
   totalExp: 0
-  expRequirements: 010000000200000003000000
-  healthUps: 010000000100000001000000
+  expRequirements: 01000000020000000300000003000000
+  healthUps: 01000000010000000100000001000000
   health: {fileID: 477523948896067877}
 --- !u!136 &5830820068482298926
 CapsuleCollider:
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 1
   startHealth: 1
   DPS: 1
   godMode: 0
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ad9ca39a3669842910f2e8edfbb9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardUnit: {fileID: 5170508868386981421}
   lvl2aura: {fileID: 7039849615532434712}
   lvl3aura: {fileID: 7984465210215999911}
 --- !u!1 &1754517835878941605
@@ -498,6 +499,7 @@ PrefabInstance:
     - {fileID: 8237563429851872398, guid: a282da6fcd5b91e40b8335c5597aa51b, type: 3}
     - {fileID: 5025982785565045550, guid: a282da6fcd5b91e40b8335c5597aa51b, type: 3}
     - {fileID: 1359278451099900765, guid: a282da6fcd5b91e40b8335c5597aa51b, type: 3}
+    - {fileID: -3431062293181392168, guid: a282da6fcd5b91e40b8335c5597aa51b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a282da6fcd5b91e40b8335c5597aa51b, type: 3}
 --- !u!4 &7927860639385634391 stripped
 Transform:

@@ -13,7 +13,7 @@ public class CardUnit : MonoBehaviour
     [SerializeField] private int currExp = 0;
     [SerializeField] int totalExp = 0;
     [SerializeField] int[] expRequirements = {1, 2, 3};
-    [SerializeField] private int[] healthUps = { 1,1,1}; // Health increases on level up
+    [SerializeField] private int[] healthUps = { 1,1,1,1}; // Health increases on level up
     [SerializeField] private Health health;
 
     public delegate void LevelUpDelegate(int level);

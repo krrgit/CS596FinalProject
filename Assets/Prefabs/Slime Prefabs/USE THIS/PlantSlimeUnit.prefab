@@ -283,7 +283,8 @@ MonoBehaviour:
   maxLevel: 3
   currExp: 0
   totalExp: 0
-  expRequirements: 010000000200000003000000
+  expRequirements: 01000000020000000300000003000000
+  healthUps: 01000000010000000100000001000000
   health: {fileID: 359555439417047342}
 --- !u!114 &2771315645869025825
 MonoBehaviour:
@@ -304,6 +305,7 @@ MonoBehaviour:
   burstDelay: 1.5
   atkSpeedMultiplier: 0
   damageBonus: 0
+  baseDamage: 0
   canBuff: 0
 --- !u!114 &359555439417047342
 MonoBehaviour:
@@ -317,10 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
+  health: 1
+  startHealth: 1
+  DPS: 1
   godMode: 0
+  hitEffect: {fileID: 4725793038341649213, guid: d59818cacbb484e94bd1f0f8be868022, type: 3}
 --- !u!114 &3890197533031456887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ad9ca39a3669842910f2e8edfbb9c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardUnit: {fileID: 2267157842307658376}
   lvl2aura: {fileID: 8357533808553492953}
   lvl3aura: {fileID: 412580379980678170}
 --- !u!1 &7850703394734035183
