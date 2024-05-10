@@ -32,7 +32,7 @@ public class BatMonsterAI : MonoBehaviour
         {
             enemyAI.AttackUnit(unitHealth);
         }
-        else if (unitDetected)
+        else if (unitDetected || enemyAI.currentState != enemyAI.EnemyState.Moving)
         {
             enemyAI.StopAttack();
             unitDetected = false;

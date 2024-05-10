@@ -1,15 +1,31 @@
+using System;
 using UnityEngine;
 
 
 public class GemCollector : MonoBehaviour
 {
-    [SerializeField]private int gem_count = 0; 
+    [SerializeField] private int gem_count = 0;
+    [SerializeField] private int newDayGemsToAdd = 12;
 
+    private WaveSpawner waveSpawner;
     public delegate void GemCollectedDelegate(int gem_count);
     public GemCollectedDelegate GemCollectedEvent;
 
     void Start()
     {
+        GemCollectedEvent?.Invoke(gem_count);
+
+        WaveSpawner.Instance.NewDayEvent += NewDayAddGems;
+    }
+
+    private void OnDisable()
+    {
+        WaveSpawner.Instance.NewDayEvent -= NewDayAddGems;
+    }
+
+    void NewDayAddGems(int currentDay, int totalDays)
+    {
+        gem_count += newDayGemsToAdd;
         GemCollectedEvent?.Invoke(gem_count);
     }
 

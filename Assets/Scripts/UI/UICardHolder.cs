@@ -10,6 +10,7 @@ public class UICardHolder : MonoBehaviour
     [SerializeField] private float holdTimer = 0.25f;  // Time to hold so that letting go drops the card.
     [SerializeField] private GemCollector gemCollector;
     [SerializeField] private UICard uiCard;
+    [SerializeField] private LayerMask raycastMask;
     private Camera mainCam;
 
     [SerializeField] private bool dropOnRelease;
@@ -63,7 +64,7 @@ public class UICardHolder : MonoBehaviour
                 RaycastHit hit;
 
                 // check if a card/deck is clicked
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, raycastMask))
                 {
                     if (hit.collider != null)
                     {
@@ -124,7 +125,7 @@ public class UICardHolder : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         // Hit Something
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 999f, raycastMask))
         {
             gridCell cell = hit.transform.gameObject.GetComponent<gridCell>();
             CardUnit unit = hit.transform.gameObject.GetComponent<CardUnit>();
@@ -176,7 +177,7 @@ public class UICardHolder : MonoBehaviour
         if (!uiCard) return;
         Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        Physics.Raycast(ray, out hit);
+        Physics.Raycast(ray, out hit, 999f, raycastMask);
             
         float dist = Mathf.Max(minDist, hit.distance);
         Vector3 cardPos = dist * ray.direction + mainCam.transform.position;

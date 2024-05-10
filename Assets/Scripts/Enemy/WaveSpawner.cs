@@ -62,7 +62,8 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private GridManager gridManager;
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private UIWaveDisplay uiWaveDisplay;
-    
+
+    public static WaveSpawner Instance;
     public delegate void NewDayDelegate(int currentDay, int totalDays);
     public NewDayDelegate NewDayEvent;
     
@@ -85,6 +86,12 @@ public class WaveSpawner : MonoBehaviour
     public float DayPercent
     {
         get { return cycleTime / cycleLength; }
+    }
+
+    void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(this);
     }
     
     // Start is called before the first frame update

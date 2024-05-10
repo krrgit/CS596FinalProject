@@ -15,7 +15,7 @@ MonoBehaviour:
   cardName: Plant Slime
   cost: 1
   health: 3
-  attack: 3
+  attack: 1
   level: 1
   description: shoots 2 peas.
   unitPrefab: {fileID: 7586965061648269145, guid: 7238300a4eb375f49b55c33b95e3f0f7, type: 3}

@@ -192,7 +192,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4908586330066046523}
-  - component: {fileID: -8559335025164896052}
   - component: {fileID: 7610157998136527303}
   - component: {fileID: 7596201775057899980}
   - component: {fileID: 551604284336094682}
@@ -220,22 +219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -35.932, y: -157.01, z: 58.814}
---- !u!114 &-8559335025164896052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5716508210901062785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
-  godMode: 0
 --- !u!114 &7610157998136527303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +238,8 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
-  health: {fileID: -8559335025164896052}
+  healthUps: 01000000010000000100000001000000
+  health: {fileID: 0}
 --- !u!136 &7596201775057899980
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -282,7 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325e603d0a6bd844495c3bcc30966373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VikingHealth: 50
+  healthAddOnLevelUp: 50
+  damageUp: 1
   damage: 5
   attackCooldown: 1
 --- !u!1 &6461060082226717721
