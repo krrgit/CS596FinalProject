@@ -6,7 +6,7 @@ public class DiggingZombie : MonoBehaviour
     public float speed = 1.0f;
 
     // Y position at which to stop moving upwards
-    public float stopY = 5.0f;
+    public float stopY = 0.0f;
 
     // Tags
     public string playerTag = "Player";
@@ -14,12 +14,16 @@ public class DiggingZombie : MonoBehaviour
 
     private Rigidbody rb;
 
+    private Animator anim;
+    private bool isAttacking = false;
+
     void Start()
     {
-        // Set the initial position to a negative Y position
-        transform.position = new Vector3(transform.position.x, -Mathf.Abs(transform.position.y), transform.position.z);
+        // Set the initial position to a specific Y position
+        transform.position = new Vector3(transform.position.x, -0.75f, transform.position.z);
 
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -42,6 +46,15 @@ public class DiggingZombie : MonoBehaviour
             if (distanceToTarget < 5.0f)
             {
                 Fetch();
+            }
+
+            if (distanceToTarget < 1.0f)
+            {
+                anim.SetBool("isAttacking", true);
+            }
+            else
+            {
+                anim.SetBool("isAttacking", false);
             }
         }
     }

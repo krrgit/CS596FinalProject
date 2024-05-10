@@ -1071,7 +1071,7 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: 1}
   moveSpeed: 0.1
   attackCooldown: 1
-  enemyDamage: 100
+  enemyDamage: 200
   currentState: 0
   previousState: 0
   isPoisoned: 0
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  startHealth: 300
+  startHealth: 400
 --- !u!1 &6861681153245785469
 GameObject:
   m_ObjectHideFlags: 0
