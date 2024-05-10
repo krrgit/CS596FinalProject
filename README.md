@@ -4,5 +4,5 @@
 ## Credits:
 - Jonathan Raguine: Slime Units, Shaders for attacks & level ups.
 - Morgan Simon: SoundManager, Sound Assets, Model Assets, MainMenu, Gem System.
-- Kevin Ramos: Deck System, UI, Grass Shader, Enemies.
+- Kevin Ramos: Deck System, UI, Grass Shader, Enemy Spawn System, Enemies.
 - Jobert: Health script.
