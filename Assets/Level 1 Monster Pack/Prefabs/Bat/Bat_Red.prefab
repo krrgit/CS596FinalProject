@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 8512402612937286369}
   - component: {fileID: 8101509373596061119}
   - component: {fileID: 1967823692989008678}
+  - component: {fileID: 1927889872524323907}
   m_Layer: 0
   m_Name: Bat_Red
   m_TagString: Untagged
@@ -687,9 +688,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1486316097729465484}
   moveDirection: {x: 0, y: 0, z: 1}
-  moveSpeed: 1
+  moveSpeed: 0.5
   attackCooldown: 1
-  enemyDamage: 0.5
+  enemyDamage: 10
   currentState: 0
   previousState: 0
   isPoisoned: 0
@@ -706,7 +707,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  startHealth: 100
+  startHealth: 150
+--- !u!114 &1927889872524323907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011593744314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65049c76e3c24c5499efb266bad92f34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  wallTag: Wall
+  speed: 1
 --- !u!1 &1000011643250032
 GameObject:
   m_ObjectHideFlags: 0
