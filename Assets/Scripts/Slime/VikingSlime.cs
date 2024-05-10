@@ -48,7 +48,7 @@ public class VikingSlime : MonoBehaviour
 
     public void DealDamageCheck(EnemyHealth enemyHealth)
     {
-        if (Time.time - lastAttackCooldown >= attackCooldown)
+        if (Time.time - lastAttackCooldown >= attackCooldown && enemyHealth)
         {
             enemyHealth.TakeDamage(damage);
             lastAttackCooldown = Time.time;

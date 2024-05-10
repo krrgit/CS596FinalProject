@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Plant Slime
   cost: 1
-  health: 3
+  health: 7
   attack: 1
   level: 1
   description: shoots 2 peas.

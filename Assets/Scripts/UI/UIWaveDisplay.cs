@@ -14,8 +14,11 @@ public class UIWaveDisplay : MonoBehaviour
         for(int i=0;i<wave.laneSpawnData.Length;++i)
         {
             int laneIndex = wave.laneSpawnData[i].laneIndex;
-            var text = displays[laneIndex].transform.GetChild(1).GetComponent< TMP_Text>();
-            text.text = wave.laneSpawnData[i].unitSpawnData[0].amount.ToString();
+            var count = displays[laneIndex].transform.GetChild(1).GetComponent< TMP_Text>();
+            count.text = wave.laneSpawnData[i].unitSpawnData[0].amount.ToString();
+            var name = displays[laneIndex].transform.GetChild(2).GetComponent< TMP_Text>();
+            name.text = wave.laneSpawnData[i].unitSpawnData[0].enemy.ToString();
+            
             displays[laneIndex].SetActive(true);
         }
     }

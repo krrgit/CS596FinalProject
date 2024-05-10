@@ -21,6 +21,11 @@ public class EnemyHealth : MonoBehaviour
         {
             Death();
         }
+
+        if (transform.position.z > 10)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Death

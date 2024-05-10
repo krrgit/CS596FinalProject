@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Bunny Slime
   cost: 1
-  health: 2
+  health: 3
   attack: 2
   level: 1
   description: shoots bouncing bullet.

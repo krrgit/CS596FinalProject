@@ -462,6 +462,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1609410110080294965}
     m_Modifications:
+    - target: {fileID: 3588857299282096428, guid: bada209464fbb234ea6000bec2331efe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.335
+      objectReference: {fileID: 0}
     - target: {fileID: 3966516556900071036, guid: bada209464fbb234ea6000bec2331efe, type: 3}
       propertyPath: m_Name
       value: RegularSlime

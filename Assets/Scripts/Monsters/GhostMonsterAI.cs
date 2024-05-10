@@ -77,7 +77,7 @@ public class GhostMonsterAI : MonoBehaviour
         }
 
         meshRenderer.material.color = startColor;
-        collider.enabled = false;
+        collider.enabled = true;
         isPhasing = false;
     }
     

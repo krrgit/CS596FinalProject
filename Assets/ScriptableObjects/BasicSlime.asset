@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Basic Slime
   cost: 1
-  health: 1
+  health: 3
   attack: 1
   level: 1
   description: shoots 1 pea.

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Chest
   cost: 1
-  health: 3
+  health: 5
   attack: 0
   level: 1
   description: spawns gems.

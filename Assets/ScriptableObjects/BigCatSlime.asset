@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Big Cat Slime
   cost: 1
-  health: 3
+  health: 7
   attack: 2
   level: 1
   description: shoots poison.

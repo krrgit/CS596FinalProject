@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Armor Slime
   cost: 1
-  health: 5
+  health: 10
   attack: 0
   level: 1
   description: Blocks enemies.

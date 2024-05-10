@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Sapling Slime
   cost: 1
-  health: 1
-  attack: 2
+  health: 4
+  attack: 1
   level: 1
   description: shoots 1 pea.
   unitPrefab: {fileID: 2137398648267790835, guid: b8a832a844c2c824987f20151f9beeaf, type: 3}

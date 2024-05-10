@@ -16,10 +16,13 @@ public class Health : MonoBehaviour
     void Start()
     {
         health = startHealth;
+        OnDamageEvent?.Invoke(health);
     }
 
     public void TakeDamage(float DPS)
     {
+        if (health == 0) return;
+        
         if (!godMode) // Check if god mode is not enabled
         {
             health -= DPS;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: VIking Slime
   cost: 1
-  health: 6
+  health: 12
   attack: 1
   level: 1
   description: deals 1 dmg when blocking.
