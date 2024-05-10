@@ -20,9 +20,9 @@ public class bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
             EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
-            enemyHealth.TakeDamage(bulletDamage);
+            if (enemyHealth) enemyHealth.TakeDamage(bulletDamage);
+            Destroy(gameObject);
         }
     }
 }

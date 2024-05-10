@@ -11,9 +11,9 @@ public class QueenSlime : MonoBehaviour
 {
     
     public Vector3 origPos;
-
     public Vector3 inFrontCell;
     public Vector3 inBackCell;
+    public int offsetZ = 2;
     public GridManager gridManager;
     public int damageBonus = 20;
     public float atkSpeedMultiplier = 0.2f;
@@ -64,8 +64,9 @@ public class QueenSlime : MonoBehaviour
     }
     void BuffFrontCell()
     {
+        print("BuffFrontCell");
         //get front cell pos
-        int row = Mathf.RoundToInt(inFrontCell.z);
+        int row = Mathf.RoundToInt(inFrontCell.z - offsetZ);
         int col = Mathf.RoundToInt(inFrontCell.x);
 
 
@@ -75,6 +76,7 @@ public class QueenSlime : MonoBehaviour
 
             if (cell != null && cell.OccupyingUnit != null)
             {
+                print("unit to buff exists");
                 if ((cell.OccupyingUnit.cardSO.cardName != "Big Cat Slime") ||
                     (cell.OccupyingUnit.cardSO.cardName != "Bunny Slime"))
                 {
@@ -141,8 +143,11 @@ public class QueenSlime : MonoBehaviour
     void ApplyBuff(gridCell cell)
     {
         slimeShoot shoot = cell.OccupyingUnit.GetComponent<slimeShoot>();
+            print("check buff");
         if (shoot != null)
         {
+            print("do buff");
+
             shoot.canBuff = true;
             shoot.damageBonus = damageBonus;
             shoot.atkSpeedMultiplier = atkSpeedMultiplier;

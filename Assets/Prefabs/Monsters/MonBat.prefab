@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80f2369ee2836484489033f882198131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
-  startHealth: 5
+  currentHealth: 3
+  startHealth: 3
   hitEffect: {fileID: 4725793038341649213, guid: 8d5c7a5243f9c4d328db4af9f860730b, type: 3}
 --- !u!114 &3580086487402193908
 MonoBehaviour:
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 5453009315358386334}
   m_Layer: 2
   m_Name: UnitDetector
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,8 +255,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 1, z: 0.5}
-  m_Center: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 0.25, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: -0.25, z: 0.5}
 --- !u!54 &1311481024064881938
 Rigidbody:
   m_ObjectHideFlags: 0

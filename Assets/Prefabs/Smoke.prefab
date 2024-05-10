@@ -639,7 +639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29877201c696de4680c0515a5e96d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PoisonDamage: 3
+  PoisonDamage: 1
+  PoisonDamageDuration: 5
   PoisonDuration: 3
 --- !u!65 &-7313177272976796305
 BoxCollider:

@@ -418,7 +418,7 @@ MonoBehaviour:
   inFrontCell: {x: 0, y: 0, z: 0}
   inBackCell: {x: 0, y: 0, z: 0}
   gridManager: {fileID: 0}
-  damageBonus: 20
+  damageBonus: 1
   atkSpeedMultiplier: 3
   newTimebetweenShots: 0.1
 --- !u!114 &3558041622794460109

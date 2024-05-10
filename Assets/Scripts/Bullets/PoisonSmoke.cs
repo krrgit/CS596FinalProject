@@ -9,6 +9,7 @@ public class PoisonSmoke : MonoBehaviour
 {
 
     public int PoisonDamage = 5;
+    public float interval = 1;
     public float PoisonDamageDuration = 5f;
     public float PoisonDuration = 7f;
     private void Start()
@@ -40,14 +41,18 @@ public class PoisonSmoke : MonoBehaviour
         {
             while (timer < PoisonDamageDuration && enemyHealth)
             {
-
-                enemyHealth.TakeDamage(PoisonDamage * Time.deltaTime);
-                timer += Time.deltaTime;
-                ai.isPoisoned = false;
-                yield return new WaitForEndOfFrame();
+                enemyHealth.TakeDamage(PoisonDamage);
+                timer += interval;
+                ai.isPoisoned = true;
+                yield return new WaitForSeconds(interval);
+                // enemyHealth.TakeDamage(PoisonDamage * Time.deltaTime);
+                // timer += Time.deltaTime;
+                // ai.isPoisoned = false;
+                // yield return new WaitForEndOfFrame();
             }
         }
     }
+   
     
     private IEnumerator DestroySmokeAfterDelay(GameObject smoke, float delay)
     {

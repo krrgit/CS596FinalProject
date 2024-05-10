@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfadf07c07622894fb80199c8db8aebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootDirection: {x: 0, y: 0.8, z: -1}
+  shootDirection: {x: 0, y: 0.6, z: -1}
   bulletSpeed: 10
   bulletDamage: 1
   slowDuration: 3

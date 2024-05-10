@@ -2955,8 +2955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54ad40eab0d0a843a0c302dc3e33209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  startHealth: 10
+  health: 50
+  startHealth: 50
   DPS: 1
   godMode: 0
   hitEffect: {fileID: 0}
@@ -3480,18 +3480,31 @@ MonoBehaviour:
     - laneIndex: 0
       unitSpawnData:
       - enemy: 0
+        amount: 3
+        spawnDelay: 0
+        spawnInterval: 1
+    - laneIndex: 0
+      unitSpawnData:
+      - enemy: 0
+        amount: 3
+        spawnDelay: 0
+        spawnInterval: 1
+  - laneSpawnData:
+    - laneIndex: 0
+      unitSpawnData:
+      - enemy: 0
         amount: 5
         spawnDelay: 0
         spawnInterval: 1
     - laneIndex: 0
       unitSpawnData:
-      - enemy: 1
+      - enemy: 0
         amount: 5
         spawnDelay: 0.1
         spawnInterval: 1
     - laneIndex: 0
       unitSpawnData:
-      - enemy: 2
+      - enemy: 1
         amount: 3
         spawnDelay: 0.1
         spawnInterval: 1.25
@@ -3499,44 +3512,25 @@ MonoBehaviour:
     - laneIndex: 0
       unitSpawnData:
       - enemy: 0
-        amount: 7
+        amount: 10
         spawnDelay: 0
         spawnInterval: 1
     - laneIndex: 0
       unitSpawnData:
       - enemy: 0
-        amount: 7
+        amount: 10
         spawnDelay: 0.1
         spawnInterval: 1
     - laneIndex: 0
       unitSpawnData:
-      - enemy: 0
+      - enemy: 1
         amount: 5
         spawnDelay: 0.1
         spawnInterval: 1.25
-  - laneSpawnData:
     - laneIndex: 0
       unitSpawnData:
-      - enemy: 0
-        amount: 12
-        spawnDelay: 0
-        spawnInterval: 1
-    - laneIndex: 0
-      unitSpawnData:
-      - enemy: 0
-        amount: 9
-        spawnDelay: 0.1
-        spawnInterval: 1
-    - laneIndex: 0
-      unitSpawnData:
-      - enemy: 0
-        amount: 7
-        spawnDelay: 0.1
-        spawnInterval: 1.25
-    - laneIndex: 0
-      unitSpawnData:
-      - enemy: 0
-        amount: 5
+      - enemy: 2
+        amount: 3
         spawnDelay: 0.1
         spawnInterval: 1.25
   currentWave: 0

@@ -30,6 +30,7 @@
         
         private void OnTriggerEnter(Collider other)
         {
+                print("Poison Hit " + other.gameObject.name);
             if (other.gameObject.CompareTag("gridCell"))
             {
                 gridCell cell = other.GetComponent<gridCell>();
