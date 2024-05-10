@@ -37,9 +37,18 @@ public class SoundManager : MonoBehaviour {
         {
             if (sources[i].gameObject.name == name)
             {
-                sources[i].Play();
+                // sources[i].Play();
+                StartCoroutine(PlaySound(i));
             }
         }
+    }
+
+    IEnumerator PlaySound(int index)
+    {
+        var go = Instantiate(sources[index], transform.position, transform.rotation);
+        go.Play();
+        yield return new WaitForSecondsRealtime(go.clip.length);
+        Destroy(go.gameObject);
     }
 
 }

@@ -18,7 +18,7 @@ public class enemyAI : MonoBehaviour
     private float lastAttackCooldown = 0.0f;
     [SerializeField] private float enemyDamage = 0.5f;
     
-    [SerializeField] private EnemyState currentState = EnemyState.Idle;
+    public EnemyState currentState = EnemyState.Idle;
     [SerializeField] private EnemyState previousState;
     
     private float origMoveSpeed;

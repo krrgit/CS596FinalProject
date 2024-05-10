@@ -291,7 +291,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9144704153452149327}
   - component: {fileID: 9110443883999003070}
-  - component: {fileID: 1453544207382720825}
   - component: {fileID: 7663706302541521219}
   - component: {fileID: 5820482541116156109}
   m_Layer: 0
@@ -333,22 +332,6 @@ CapsuleCollider:
   m_Height: 0.67223203
   m_Direction: 1
   m_Center: {x: -0.031938165, y: 0.26761132, z: -0.0076185265}
---- !u!114 &1453544207382720825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8476710554759438581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f9ec9302ecb9b4e8ae8dd0cdbc8400, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  startHealth: 100
-  DPS: 10
-  godMode: 0
 --- !u!114 &7663706302541521219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,7 +351,8 @@ MonoBehaviour:
   currExp: 0
   totalExp: 0
   expRequirements: 010000000200000003000000
-  health: {fileID: 1453544207382720825}
+  healthUps: 01000000010000000100000001000000
+  health: {fileID: 0}
 --- !u!114 &5820482541116156109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +372,7 @@ MonoBehaviour:
   burstDelay: 1.5
   atkSpeedMultiplier: 0
   damageBonus: 0
+  baseDamage: 0
   canBuff: 0
 --- !u!1 &8796075780274728926
 GameObject:

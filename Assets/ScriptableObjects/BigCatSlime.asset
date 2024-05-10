@@ -15,8 +15,8 @@ MonoBehaviour:
   cardName: Big Cat Slime
   cost: 1
   health: 3
-  attack: 3
+  attack: 2
   level: 1
-  description: Long range melee attack.
+  description: shoots poison.
   unitPrefab: {fileID: 1693007204749975889, guid: a8ec2a029298c2740be6cce0d435efca, type: 3}
   facePrefab: {fileID: 1546071679448461157, guid: 56d6500cafb1c4e5a9722ef92d063f65, type: 3}

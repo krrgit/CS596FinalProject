@@ -21,7 +21,10 @@ public class PoisonSmoke : MonoBehaviour
         {
             EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
             enemyAI ai = other.gameObject.GetComponent<enemyAI>();
-            ApplyPoison(enemyHealth, ai);
+            if (enemyHealth && ai)
+            {
+                ApplyPoison(enemyHealth, ai);
+            }
         }
     }
 
@@ -35,13 +38,13 @@ public class PoisonSmoke : MonoBehaviour
         float timer = 0f;
         if (!ai.isPoisoned)
         {
-            while (timer < PoisonDamageDuration)
+            while (timer < PoisonDamageDuration && enemyHealth)
             {
 
                 enemyHealth.TakeDamage(PoisonDamage * Time.deltaTime);
                 timer += Time.deltaTime;
                 ai.isPoisoned = false;
-                yield return null;
+                yield return new WaitForEndOfFrame();
             }
         }
     }
